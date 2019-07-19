@@ -9,11 +9,8 @@ class PagesController < ApplicationController
 
   def create_contact_models_from_csv
     puts "**** CONTACT CSV METHOD ****"
-
     Contact.destroy_all
-
     filepath = 'contacts.csv'
-
     CSV.foreach(filepath) do |row|
       contact = Contact.new(department: "#{row[0]}",
                             city: "#{row[1]}",
@@ -28,19 +25,15 @@ class PagesController < ApplicationController
                           )
       contact.save
     end
-
     Contact.first.destroy
-
     puts "********************"
+    render :create_contact_models_from_csv
   end
 
   def create_city_equipments_models_from_csv
     puts "**** CITY EQUIPMENTS CSV METHOD ****"
-
     CityEquipment.destroy_all
-
     filepath = 'city_equipments.csv'
-
     CSV.foreach(filepath) do |row|
       city_equipment = CityEquipment.new(com_insee: "#{row[0]}",
                             com_lib: "#{row[1]}",
@@ -48,19 +41,15 @@ class PagesController < ApplicationController
                           )
       city_equipment.save
     end
-
     CityEquipment.first.destroy
-
     puts "********************"
+    render :create_city_equipments_models_from_csv
   end
 
   def create_info_equipments_models_from_csv
     puts "**** IFO EQUIPMENTS CSV METHOD ****"
-
     InfoEquipment.destroy_all
-
     filepath = 'info_equipments.csv'
-
     CSV.foreach(filepath) do |row|
       puts "#{row[2]}"
       info_equipment = InfoEquipment.new(lat: "#{row[0]}",
@@ -70,9 +59,8 @@ class PagesController < ApplicationController
                           )
       info_equipment.save
     end
-
     InfoEquipment.first.destroy
-
     puts "********************"
+    render :create_info_equipments_models_from_csv
   end
 end

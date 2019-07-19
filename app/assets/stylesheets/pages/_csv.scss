@@ -1,0 +1,17 @@
+.csv-loading-content {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 2rem;
+  color: $main-gray;
+  margin-top: 50px;
+}
+.csv-content {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 2rem;
+  color: $main-gray;
+  margin-top: 50px;
+  display: none;
+}
