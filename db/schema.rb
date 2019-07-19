@@ -10,10 +10,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_18_122751) do
+ActiveRecord::Schema.define(version: 2019_07_18_162208) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "city_equipments", force: :cascade do |t|
+    t.string "com_insee"
+    t.string "com_lib"
+    t.string "nb_equipments"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "contacts", force: :cascade do |t|
+    t.string "department"
+    t.string "city"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "label_level"
+    t.string "region"
+    t.string "phone_number"
+    t.string "email"
+    t.string "list_current_year"
+    t.string "post"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "info_equipments", force: :cascade do |t|
+    t.float "lat"
+    t.float "lng"
+    t.string "activity"
+    t.string "creation_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -28,6 +60,8 @@ ActiveRecord::Schema.define(version: 2019_07_18_122751) do
     t.string "sport_frequencies"
     t.string "sport_interests"
     t.boolean "informations_confirmation"
+    t.string "home_address"
+    t.string "work_address"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

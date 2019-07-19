@@ -1,0 +1,2 @@
+class InfoEquipment < ApplicationRecord
+end

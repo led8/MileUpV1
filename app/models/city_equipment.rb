@@ -1,0 +1,2 @@
+class CityEquipment < ApplicationRecord
+end
