@@ -4,8 +4,11 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: :home
 
   def home
+    @equipments = InfoEquipment.first(10)
     render :home
   end
+
+  ## CSV METHOD TO GENERATE MODEL ##
 
   def create_contact_models_from_csv
     puts "**** CONTACT CSV METHOD ****"

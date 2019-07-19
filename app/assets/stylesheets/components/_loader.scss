@@ -39,25 +39,25 @@
   width: 20px;
 }
 .circle:nth-child(1) {
-  background-color: #6847DA;
+  background-color: $main-purple;
   top: 0;
   left: 0;
   animation: anima1 2s ease infinite;
 }
 .circle:nth-child(2) {
-  background-color: #5F9AC8;
+  background-color: $main-light-blue;
   top: 0;
   right: 0;
   animation: anima2 2s ease infinite;
 }
 .circle:nth-child(3) {
-  background-color: #6847DA;
+  background-color: $main-purple;
   bottom: 0;
   left: 0;
   animation: anima3 2s ease infinite;
 }
 .circle:nth-child(4) {
-  background-color: #5F9AC8;
+  background-color: $main-light-blue;
   bottom: 0;
   right: 0;
   animation: anima4 2s ease infinite;

@@ -1,1 +1,37 @@
+<div class="home-container">
+
+  <div class="map-container">
+    <div class="right-container">
+      <div class="text">
+        Rejoignez la communauté Mile'Up <br>et accédez facilement aux équipements <br>sportifs de votre ville !
+      </div>
+      <div class="login-link">
+        <%= link_to "S'inscrire", new_user_session_path, class: "login-button" %>
+      </div>
+    </div>
+    <div class="left-container">
+      <div id="map" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+    </div>
+  </div>
+
+  <div class="scrolling-wrapper">
+    <div class="scrolling-equipments-container">
+      <% @equipments.each do |equipment| %>
+        <div class="equipment-card">
+          <div class="illustration-card">
+            <!-- equipment.illustration -->
+          </div>
+          <div class="informations-card">
+            <div class="activity">
+              <%= equipment.activity %>
+            </div>
+            <!-- distance to walk -->
+            <!-- time to walk -->
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+</div>
 
