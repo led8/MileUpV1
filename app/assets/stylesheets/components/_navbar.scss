@@ -5,10 +5,7 @@
   width: 100%;
   top: 0;
   z-index: 10;
-}
-
-.navbar-mileup-border {
-  border: 1px solid black;
+  transition: all .7s ease-out;
 }
 
 .navbar-mileup .navbar-collapse {
@@ -16,12 +13,26 @@
 }
 
 .navbar-mileup .navbar-brand svg {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
 }
 
-.navbar-nav {
-  .nav-link {
-    color: $main-purple !important;
+.navbar-light {
+  .navbar-nav {
+    .nav-link {
+      color: $main-purple;
+      transition: all .7s ease-out;
+    }
   }
+}
+
+// ADDED CLASSES WITH JS //
+
+.navbar-mileup-purple {
+  background-color: $main-purple;
+  transition: all .7s ease-out;
+}
+.nav-link-white {
+  color: white !important;
+  transition: all .7s ease-out;
 }

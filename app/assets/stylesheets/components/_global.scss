@@ -1,7 +1,11 @@
 
-// SOME GLOBALS CLASSES //
+// SOME USEFULL CLASSES //
 
 .flex-row-reverse {
   display: flex;
   flex-direction: row-reverse;
+}
+
+.visibility-hidden {
+  visibility: hidden;
 }
