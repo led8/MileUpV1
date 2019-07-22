@@ -15,6 +15,7 @@ gem 'simple_form'
 gem 'devise'
 gem 'uglifier'
 gem 'webpacker'
+gem 'jquery-rails'
 
 gem 'geocoder'
 
