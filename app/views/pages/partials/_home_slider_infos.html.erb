@@ -1,22 +1,16 @@
-
-              <!-- UNVISIBLE INPUTS -->
-
-<input type="radio" id="first" name="slide-choice">
-<input type="radio" id="second" name="slide-choice">
-<input type="radio" id="third" name="slide-choice">
-<input type="radio" id="fourth" name="slide-choice">
-
-<!-- ################################################## -->
-
-<label for="first">●</label>
-<label for="second">●</label>
-<label for="third">●</label>
-<label for="fourth">●</label>
-
 <div class="slider">
+
   <div class="slide" id="first-slide">
     <div class="left-slide-container">
-      CONTENU DE GAUCHE
+      <div class="header">
+        <h1>Sportive toi !</h1>
+      </div>
+      <div class="content">
+        Découvre le sport qui t'entoure. <br>Le moyen le plus simple de se mettre <br>en mouvement 🚀
+      </div>
+      <div class="start-link">
+        <%= link_to "Je commence", "#", class: "start-button" %>
+      </div>
     </div>
     <div class="right-slide-container">
       <%= svg('slide-1') %>
@@ -24,29 +18,37 @@
   </div>
 
   <div class="slide" id="second-slide">
-    <div class="left-slide-container">
-      CONTENU DE GAUCHE
-    </div>
     <div class="right-slide-container">
       <%= svg('slide-2') %>
+    </div>
+    <div class="left-slide-container">
+      <div class="header">
+        <h1>A tout moment !</h1>
+      </div>
+      <div class="content">
+        Rejoins une activité seul ou à plusieurs ! <br>Rejoins la communauté, ou invite <br>tes amis 💪
+      </div>
+      <div class="start-link">
+        <%= link_to "Je commence", "#", class: "start-button" %>
+      </div>
     </div>
   </div>
 
   <div class="slide" id="third-slide">
     <div class="left-slide-container">
-      CONTENU DE GAUCHE
+      <div class="header">
+        <h1>Du sport pour chaque humeur</h1>
+      </div>
+      <div class="content">
+        Envie de se défouler ? Manque de <br>motivation ? Nous avons des<br> programmes qui s'adaptent à toi 👌
+      </div>
+      <div class="start-link">
+        <%= link_to "Je commence", "#", class: "start-button" %>
+      </div>
     </div>
     <div class="right-slide-container">
       <%= svg('slide-3') %>
     </div>
   </div>
 
-  <div class="slide" id="fourth-slide">
-    <div class="left-slide-container">
-      CONTENU DE GAUCHE
-    </div>
-    <div class="right-slide-container">
-      <%= svg('slide-1') %>
-    </div>
-  </div>
 </div>

@@ -1,5 +1,14 @@
 .navbar-mileup {
   justify-content: space-between;
+  background-color: transparent;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar-mileup-border {
+  border: 1px solid black;
 }
 
 .navbar-mileup .navbar-collapse {
