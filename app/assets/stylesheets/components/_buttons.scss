@@ -1,4 +1,4 @@
-.login-button {
+.home-login-button {
   padding: 10px 40px;
   // background: linear-gradient(to right, white 50%, #6847DA 0%, rgba(255, 255, 255, 0) 97.29% 50%), #5F9AC8;
   // background-size: 200% 100%;
@@ -12,6 +12,20 @@
   &:hover {
     // background-position: left bottom;
     // color: $main-purple;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+}
+
+.navbar-login-button {
+  padding: 10px 40px;
+  color: white;
+  border-radius: 50px;
+  border: 2px solid white;
+  font-size: $button-font-size;
+  &:hover {
+    transition: all .5s ease-out;
     color: white;
     text-decoration: none;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);

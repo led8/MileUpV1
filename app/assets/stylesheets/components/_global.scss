@@ -6,6 +6,14 @@
   flex-direction: row-reverse;
 }
 
+.flex {
+  display: flex !important;
+}
+
 .visibility-hidden {
   visibility: hidden;
+}
+
+.hidden {
+  display: none;
 }

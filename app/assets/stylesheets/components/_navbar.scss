@@ -1,38 +1,45 @@
 .navbar-mileup {
   justify-content: space-between;
   background-color: transparent;
+  transition: all .1s ease-out;
   position: sticky;
   width: 100%;
   top: 0;
   z-index: 10;
-  transition: all .7s ease-out;
+  &.purple {
+    background-color: $main-purple !important;
+  }
 }
-
 .navbar-mileup .navbar-collapse {
   flex-grow: 0;
 }
-
 .navbar-mileup .navbar-brand svg {
   width: 60px;
   height: 60px;
 }
-
 .navbar-light {
   .navbar-nav {
     .nav-link {
       color: $main-purple;
-      transition: all .7s ease-out;
+      transition: all .1s ease-out;
+      &.white {
+        color: white !important;
+      }
+    }
+    .nav-item {
+      display: flex;
+      align-items: baseline;
     }
   }
 }
 
+
+
 // SOME CLASSES HANDLED WITH JS //
 
-.navbar-mileup-purple {
-  background-color: $main-purple;
-  transition: all .7s ease-out;
-}
-.nav-link-white {
-  color: white !important;
-  transition: all .7s ease-out;
-}
+// .positive-translate {
+//   transform: translateY(0px) !important;
+// }
+// .negative-translate {
+//   transform: translateY(-86px);
+// }
