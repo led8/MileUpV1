@@ -13,21 +13,40 @@ function debounce(func, wait = 20, immediate = true) {
   };
 }
 
-const sliderContainers = document.querySelectorAll('.slide-in');
+const sliderImages = document.querySelectorAll('.slide-in');
 
-function checkSlide(e) {
-  sliderContainers.forEach(slideContainer => {
-    const slideInAt = (window.scrollY + window.innerHeight) - slideContainer.offsetHeight / 2;
-    const containerBottom = slideContainer.offsetTop + slideContainer.offsetHeight;
-    const isHalfShown = slideInAt > slideContainer.offsetTop;
+function handleImages(e) {
+  sliderImages.forEach(sliderImage => {
+    const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.offsetHeight / 2;
+    const containerBottom = sliderImage.offsetTop + sliderImage.offsetHeight;
+    const isHalfShown = slideInAt > sliderImage.offsetTop;
     const isNotScrolledPast = window.scrollY < containerBottom;
 
     if (isHalfShown && isNotScrolledPast) {
-      slideContainer.classList.add('active');
+      sliderImage.classList.add('active');
     } else {
-      slideContainer.classList.remove('active');
+      sliderImage.classList.remove('active');
     }
   })
 }
 
-window.addEventListener('scroll', debounce(checkSlide));
+const unShowContents = document.querySelectorAll('.show-up');
+
+function handleContents(e) {
+  unShowContents.forEach(unShowContent => {
+    const slideInAt = (window.scrollY + window.innerHeight) - unShowContent.offsetHeight / 2;
+    const containerBottom = unShowContent.offsetTop + unShowContent.offsetHeight;
+    const isHalfShown = slideInAt > unShowContent.offsetTop;
+    const isNotScrolledPast = window.scrollY < containerBottom;
+
+  if (isHalfShown && isNotScrolledPast) {
+      unShowContent.classList.add('active');
+    } else {
+      unShowContent.classList.remove('active');
+    }
+  })
+}
+
+
+window.addEventListener('scroll', debounce(handleImages));
+window.addEventListener('scroll', debounce(handleContents));
