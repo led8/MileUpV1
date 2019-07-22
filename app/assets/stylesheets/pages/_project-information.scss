@@ -9,6 +9,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    width: 100%;
     h1 {
       font-size: $header-font-size;
       color: $main-gray;
@@ -23,5 +24,6 @@
   }
   .right-information-container {
     display: flex;
+    width: 100%;
   }
 }
