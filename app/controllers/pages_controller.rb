@@ -4,6 +4,7 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: :home
 
   def home
+    @user = current_user
     @equipments = InfoEquipment.where.not(lat: nil, lng: nil).first(10)
     @markers = @equipments.map do |equipment|
       {

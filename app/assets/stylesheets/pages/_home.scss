@@ -3,7 +3,6 @@
 }
 
 body {
-  height: 100vh;
   background: -webkit-linear-gradient(#FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #EEF2FF;
   background: -o-linear-gradient(#FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #EEF2FF;
   background: linear-gradient(#FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #EEF2FF;
@@ -12,6 +11,9 @@ body {
   padding-right: 50px;
   padding-left: 50px;
 }
+
+// MAP CONTAINER //
+
 .map-container {
   width: 100%;
   display: flex;
@@ -37,3 +39,17 @@ body {
     padding: 5px;
   }
 }
+
+// MAP CONTAINER RESPONSIVE //
+
+// @media(max-width: 900px) {
+//   .map-container {
+//     flex-direction: column;
+//     .left-container {
+//       width: 100% !important;
+//     }
+//     .right-container {
+//       display: none !important;
+//     }
+//   }
+// }

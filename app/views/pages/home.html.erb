@@ -2,12 +2,20 @@
 
   <div class="map-container">
     <div class="right-container">
-      <div class="text">
-        Rejoignez la communauté Mile'Up <br>et accédez facilement aux équipements <br>sportifs de votre ville !
-      </div>
-      <div class="login-link">
-        <%= link_to "S'inscrire", new_user_session_path, class: "login-button" %>
-      </div>
+
+      <% if !user_signed_in? %>
+        <div class="text">
+          Rejoignez la communauté Mile'Up <br>et accédez facilement aux équipements <br>sportifs de votre ville !
+        </div>
+        <div class="login-link">
+          <%= link_to "Se connecter", new_user_session_path, class: "login-button" %>
+        </div>
+      <% else %>
+        <div class="text">
+          Bienvenue <%= @user.email %>, <strong>baladez-vous sur notre carte</strong> 🚀
+        </div>
+      <% end %>
+
     </div>
     <div class="left-container">
       <div id="map"
@@ -16,24 +24,9 @@
     </div>
   </div>
 
-  <div class="scrolling-wrapper">
-    <div class="scrolling-equipments-container">
-      <% @equipments.each do |equipment| %>
-        <div class="equipment-card" data-lat="<%= equipment.lat %>" data-lng="<%= equipment.lng %>">
-          <div class="illustration-card">
-            <!-- equipment.illustration -->
-          </div>
-          <div class="informations-card">
-            <div class="activity">
-              <%= equipment.activity %>
-            </div>
-            <!-- distance to walk -->
-            <!-- time to walk -->
-          </div>
-        </div>
-      <% end %>
-    </div>
-  </div>
+  <%= render './pages/partials/home_scrolling_equipments' %>
+
+  <%= render './pages/partials/home_slider_infos' %>
 
 </div>
 

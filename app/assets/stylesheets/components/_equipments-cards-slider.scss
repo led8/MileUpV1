@@ -2,6 +2,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
   .scrolling-equipments-container {
     display: flex;
     flex-wrap: nowrap;
@@ -34,6 +35,8 @@
         flex-direction: column;
         justify-content: center;
         padding: 10px;
+        background-color: white;
+        border-radius: 0 10px 10px 0;
         .activity {
           display: flex;
           justify-content: center;
@@ -44,3 +47,15 @@
     }
   }
 }
+
+// RESPONSIVE //
+
+// @media(max-width: 900px) {
+//   .scrolling-equipments-container {
+//     width: 100% !important;
+//     .equipment-card {
+//       // width: 250px !important;
+//       // height: 100px !important;
+//     }
+//   }
+// }

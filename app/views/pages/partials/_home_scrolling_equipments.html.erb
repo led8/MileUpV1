@@ -1,0 +1,18 @@
+<div class="scrolling-wrapper">
+    <div class="scrolling-equipments-container">
+      <% @equipments.each do |equipment| %>
+        <div class="equipment-card" data-lat="<%= equipment.lat %>" data-lng="<%= equipment.lng %>">
+          <div class="illustration-card">
+            <!-- equipment.illustration -->
+          </div>
+          <div class="informations-card">
+            <div class="activity">
+              <%= equipment.activity %>
+            </div>
+            <!-- distance to walk -->
+            <!-- time to walk -->
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
