@@ -1,14 +1,14 @@
 
 // SOME USEFULL CLASSES //
 
+    // FLEX BOX TRICKS //
+
 .flex-row-reverse {
   display: flex;
   flex-direction: row-reverse;
 }
 
-.flex {
-  display: flex !important;
-}
+    // DISPLAYING TRICKS //
 
 .visibility-hidden {
   visibility: hidden;
@@ -16,4 +16,13 @@
 
 .hidden {
   display: none;
+}
+
+    // POSITION TRICKS //
+
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
 }
