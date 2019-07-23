@@ -1,0 +1,32 @@
+section.login-container {
+  height: 100%;
+  background-color: $main-gray;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .mileup-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  .simple_form.new_user {
+    width: 100%;
+  }
+  .login-form {
+    width: 100%;
+  }
+  .join-mileup {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    .header {
+      font-size: $header-font-size;
+    }
+  }
+}

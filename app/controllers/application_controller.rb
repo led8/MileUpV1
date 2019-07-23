@@ -11,7 +11,10 @@ class ApplicationController < ActionController::Base
                                                         :sport_interests,
                                                         :informations_confirmation,
                                                         :home_address,
-                                                        :work_address
+                                                        :work_address,
+                                                        :gender,
+                                                        :first_name,
+                                                        :last_names
                                                       ])
 
     # For additional in app/views/devise/registrations/edit.html.erb
