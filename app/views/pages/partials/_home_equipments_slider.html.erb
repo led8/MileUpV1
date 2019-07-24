@@ -1,4 +1,10 @@
 <div class="scrolling-wrapper absolute">
+
+    <div class="arrow-container">
+      <i class="fas fa-chevron-left" id="left-paddle"></i>
+      <i class="fas fa-chevron-right" id="right-paddle"></i>
+    </div>
+
     <div class="scrolling-equipments-container">
       <% @equipments.each do |equipment| %>
         <div class="equipment-card" data-lat="<%= equipment.lat %>" data-lng="<%= equipment.lng %>">
