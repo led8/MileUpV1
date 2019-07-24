@@ -1,38 +1,36 @@
 const initUpdateNavbarOnScroll = () => {
-  const transparentNavbar = document.getElementById('transparent-navbar'),
-        purpleNavbar = document.getElementById('purple-navbar'),
+  const navbar = document.getElementById('navbar'),
         partnerLink = document.getElementById('becoming-partner'),
         navbarItem = document.querySelector('.nav-item'),
         map = document.getElementById('map');
 
-  let transparentNavbarHeight = transparentNavbar.offsetHeight,
-      purpleNavbarHeight = purpleNavbar.offsetHeight,
+  let navbarHeight = navbar.offsetHeight,
       navbarItemWidth = navbarItem.offsetWidth,
       mapHeight = map.offsetHeight;
 
   var navbarLoginButton = $('.navbar-login-button');
 
-  if (transparentNavbar) {
+  if (navbar) {
     window.addEventListener('scroll', () => {
-      if(window.scrollY >= 50) {
-        transparentNavbar.style.transform = `translateY(${-transparentNavbarHeight}px)`;
-        transparentNavbar.classList.add('absolute');
-        purpleNavbar.classList.remove('absolute');
-        purpleNavbar.style.transform = "translateY(0px)";
+      if(window.scrollY >= window.innerHeight) {
+        navbar.style.transform = 'translateY(0px)';
+        setTimeout(function(){
+          partnerLink.style.transform = `translateX(${-navbarItemWidth}px)`;
+        }, 500)
+        setTimeout(function(){
+          navbarLoginButton.fadeIn(1000);
+        }, 1000)
       } else {
-        transparentNavbar.style.transform = "translateY(0px)";
-        transparentNavbar.classList.remove('absolute');
-        purpleNavbar.style.transform = `translateY(${-purpleNavbarHeight}px)`;
-        purpleNavbar.classList.add('absolute');
+        navbar.style.transform = `translateY(${-navbarHeight}px)`;
       }
 
-      if(window.scrollY >= mapHeight) {
-        partnerLink.style.transform = `translateX(${-navbarItemWidth}px)`;
-        navbarLoginButton.fadeIn(2200);
-      } else {
-        partnerLink.style.transform = "translateX(0px)";
-        navbarLoginButton.fadeOut(100);
-      }
+      // if(window.scrollY >= mapHeight) {
+      //   partnerLink.style.transform = `translateX(${-navbarItemWidth}px)`;
+      //   navbarLoginButton.fadeIn(2200);
+      // } else {
+      //   partnerLink.style.transform = "translateX(0px)";
+      //   navbarLoginButton.fadeOut(100);
+      // }
     });
   }
 }

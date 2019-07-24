@@ -1,6 +1,4 @@
-<%= render './shared/partials/scrolling_navbar' %>
-
-<div class="navbar navbar-expand-sm navbar-light navbar-mileup" id="transparent-navbar">
+<div class="navbar navbar-expand-sm navbar-light navbar-mileup" id="navbar">
   <%= link_to "#", class: "navbar-brand" do %>
     <%= svg('logo') %>
     <% end %>
@@ -28,6 +26,7 @@
       <% else %>
         <li class="nav-item">
           <%= link_to "Devenir une ville partenaire", "#", class: "nav-link", id:"becoming-partner" %>
+          <%= link_to "Se connecter", new_user_session_path, class: "navbar-login-button absolute hidden" %>
         </li>
       <% end %>
     </ul>

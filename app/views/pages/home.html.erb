@@ -1,30 +1,36 @@
 <section class="home-container">
 
-  <div class="map-container">
-    <div class="right-container">
+  <div class="home-banner">
+    <div class="map-container">
+      <div class="left-container">
 
-      <% if !user_signed_in? %>
-        <div class="text">
-          Rejoignez la communauté Mile'Up <br>et accédez facilement aux équipements <br>sportifs de votre ville !
+        <div class="mileup-logo">
+          <%= svg('logo') %>
         </div>
-        <div class="login-link">
-          <%= link_to "Se connecter", new_user_session_path, class: "home-login-button" %>
-        </div>
-      <% else %>
-        <div class="text">
-          Bienvenue <%= @user.email %>, <strong>baladez-vous sur notre carte</strong> 🚀
-        </div>
-      <% end %>
 
+        <% if !user_signed_in? %>
+          <div class="text">
+            Rejoignez la communauté Mile'Up <br>et accédez facilement aux équipements <br>sportifs de votre ville !
+          </div>
+          <div class="login-link">
+            <%= link_to "Se connecter", new_user_session_path, class: "home-login-button" %>
+          </div>
+        <% else %>
+          <div class="text">
+            Bienvenue <%= @user.email %>, <strong>baladez-vous sur notre carte</strong> 🚀
+          </div>
+        <% end %>
+
+      </div>
+      <div class="right-container">
+        <div id="map"
+            data-markers="<%= @markers.to_json %>"
+            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+      </div>
     </div>
-    <div class="left-container">
-      <div id="map"
-          data-markers="<%= @markers.to_json %>"
-          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-    </div>
+
+    <%= render './pages/partials/home_scrolling_equipments' %>
   </div>
-
-  <%= render './pages/partials/home_scrolling_equipments' %>
 
   <%= render './pages/partials/project-information' %>
 
