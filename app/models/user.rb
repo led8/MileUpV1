@@ -6,16 +6,6 @@ class User < ApplicationRecord
          :omniauthable, omniauth_providers: [:facebook]
 
   validates :email, presence: true, uniqueness: true
-  # validates :age, presence: true
-  # validates :size, presence: true
-  # validates :sport_frequencies, presence: true
-  # validates :sport_interests, presence: true
-  # validates :informations_confirmation, acceptance: { message: 'ce champ est requis'}
-  # validates :home_address, presence: true
-  # validates :work_address, presence: true
-  # validates :gender, presence: true, inclusion: { in: ['female', 'male'] }
-  # validates :first_name, presence: true
-  # validates :last_name, presence: true
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|

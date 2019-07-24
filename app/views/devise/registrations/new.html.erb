@@ -45,6 +45,10 @@
                   label: "Confirmation du mot de passe",
                   required: true,
                   input_html: { autocomplete: "new-password" } %>
+
+      <%= f.input :receive_content,
+                  as: :boolean,
+                  label: "Inscrivez-vous pour recevoir du contenu exclusif Mile'Up" %>
       </div>
 
     <div class="cgu-text">
