@@ -1,4 +1,28 @@
-section.login-container {
+section.signin-container {
+  height: 100vh !important;
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 120px;
+    .form-actions {
+      margin: 0 !important;
+    }
+  }
+  .forgot-password {
+    font-size: .8rem;
+    color: $main-light-blue-gray;
+  }
+  .form-check {
+    margin-top: 1rem;
+  }
+  .do-not-member {
+    font-weight: lighter;
+    margin-top: 2rem;
+  }
+}
+section.signup-container, section.signin-container {
   height: 100%;
   background-color: $main-blue-purple;
   padding-left: 50px;
@@ -13,20 +37,112 @@ section.login-container {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
   }
   .simple_form.new_user {
     width: 100%;
+    label {
+      color: white;
+      font-weight: lighter;
+      abbr {
+        display: none;
+      }
+    }
+    .form-inputs {
+      width: 60%;
+      margin: auto;
+      input {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid $main-light-blue-gray;
+        &:focus {
+          outline: none;
+          color: $main-light-blue-gray;
+        }
+      }
+    }
+    .cgu-text {
+      width: 60%;
+      margin: auto;
+      font-size: .8rem;
+      color: white;
+      a {
+        color: white;
+        text-decoration: underline;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    .form-actions {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      display: flex;
+      align-items: baseline;
+     }
+    .text-muted {
+      font-size: .8rem;
+      color: $main-light-blue-gray !important;
+    }
   }
   .login-form {
     width: 100%;
   }
   .join-mileup {
+    width: 100%;
     display: flex;
     flex-direction: column;
     text-align: center;
+    .text-container {
+      font-weight: lighter;
+      display: flex;
+      flex-direction: column;
+      font-size: $small-font-size;
+    }
     .header {
       font-size: $header-font-size;
+    }
+    .facebook-login {
+      margin-top: 40px;
+    }
+  }
+  .separate-login-line {
+    margin: 30px 0;
+    width: 100%;
+    border: .5px solid #1a1a33;
+  }
+}
+
+// RESPONSIVE VERSION //
+
+@media (max-width: 740px) {
+  section.signup-container {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    .form-inputs, .cgu-text, .form-actions {
+      width: 80% !important;
+      margin: auto;
+    }
+    .form-actions {
+      flex-direction: column;
+      align-items: center !important;
+      .login-button {
+        margin-right: 0 !important;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  section.signin-container {
+    height: 100% !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    .form-inputs, .cgu-text, .form-actions {
+      width: 80% !important;
+      margin: auto;
+    }
+    u {
+      text-align: center;
     }
   }
 }

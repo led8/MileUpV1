@@ -41,9 +41,11 @@ section.home-container {
       display: flex;
       flex-direction: column;
     }
-    .text {
+    .text-container {
       color: $main-light-blue-gray;
       font-size: $text-font-size;
+      display: flex;
+      flex-direction: column;
     }
     .login-link {
       margin-top: 30px;

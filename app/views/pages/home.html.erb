@@ -10,16 +10,16 @@
           </div>
 
           <% if !user_signed_in? %>
-            <div class="text">
-              Rejoignez la communauté Mile'Up <br>et accédez facilement aux équipements <br>sportifs de votre ville !
+            <div class="text-container">
+              <div class="text-top">Rejoignez la communauté Mile'Up</div>
+              <div class="text-between">et accédez facilement aux équipements</div>
+              <div class="text-bottom">sportifs de votre ville !</div>
             </div>
             <div class="login-link">
               <%= link_to "Se connecter", new_user_session_path, class: "home-login-button" %>
             </div>
           <% else %>
-            <div class="text">
-              Bienvenue <%= @user.email %>, <strong>baladez-vous sur notre carte</strong> 🚀
-            </div>
+            <div class="text">Bienvenue <%= @user.email %>, <strong>baladez-vous sur notre carte</strong> 🚀</div>
           <% end %>
         </div>
 
