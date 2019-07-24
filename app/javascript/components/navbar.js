@@ -12,7 +12,7 @@ const initUpdateNavbarOnScroll = () => {
 
   if (navbar) {
     window.addEventListener('scroll', () => {
-      if(window.scrollY >= window.innerHeight) {
+      if(window.scrollY >= (window.innerHeight / 2)) {
         navbar.style.transform = 'translateY(0px)';
         setTimeout(function(){
           partnerLink.style.transform = `translateX(${-navbarItemWidth}px)`;
@@ -23,14 +23,6 @@ const initUpdateNavbarOnScroll = () => {
       } else {
         navbar.style.transform = `translateY(${-navbarHeight}px)`;
       }
-
-      // if(window.scrollY >= mapHeight) {
-      //   partnerLink.style.transform = `translateX(${-navbarItemWidth}px)`;
-      //   navbarLoginButton.fadeIn(2200);
-      // } else {
-      //   partnerLink.style.transform = "translateX(0px)";
-      //   navbarLoginButton.fadeOut(100);
-      // }
     });
   }
 }

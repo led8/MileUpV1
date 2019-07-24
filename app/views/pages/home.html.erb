@@ -4,22 +4,24 @@
     <div class="map-container">
       <div class="left-container">
 
-        <div class="mileup-logo">
-          <%= svg('logo') %>
-        </div>
+        <div class="wrapper">
+          <div class="mileup-logo">
+            <%= svg('logo') %>
+          </div>
 
-        <% if !user_signed_in? %>
-          <div class="text">
-            Rejoignez la communauté Mile'Up <br>et accédez facilement aux équipements <br>sportifs de votre ville !
-          </div>
-          <div class="login-link">
-            <%= link_to "Se connecter", new_user_session_path, class: "home-login-button" %>
-          </div>
-        <% else %>
-          <div class="text">
-            Bienvenue <%= @user.email %>, <strong>baladez-vous sur notre carte</strong> 🚀
-          </div>
-        <% end %>
+          <% if !user_signed_in? %>
+            <div class="text">
+              Rejoignez la communauté Mile'Up <br>et accédez facilement aux équipements <br>sportifs de votre ville !
+            </div>
+            <div class="login-link">
+              <%= link_to "Se connecter", new_user_session_path, class: "home-login-button" %>
+            </div>
+          <% else %>
+            <div class="text">
+              Bienvenue <%= @user.email %>, <strong>baladez-vous sur notre carte</strong> 🚀
+            </div>
+          <% end %>
+        </div>
 
       </div>
       <div class="right-container">
@@ -32,7 +34,7 @@
     <%= render './pages/partials/home_equipments_slider' %>
   </div>
 
-  <%= render './pages/partials/project-information' %>
+  <%= render './pages/partials/mileup_slides' %>
 
 </section>
 
