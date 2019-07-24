@@ -16,10 +16,37 @@ section.signin-container {
   }
   .form-check {
     margin-top: 1rem;
+    padding: 0 !important;
   }
   .do-not-member {
     font-weight: lighter;
     margin-top: 2rem;
+  }
+  input[type="checkbox"]{
+    display: none;
+  }
+  label {
+    cursor: pointer;
+    user-select: none;
+  }
+  input[type="checkbox"] + label:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 1.2rem;
+    content: "\f0c8";
+    color: #1a1a33;
+    margin-right: 10px;
+  }
+  input[type="checkbox"]:checked + label:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 1.2rem;
+    content: "\f00c";
+    color: white;
+    margin-right: 10px;
+    background: linear-gradient(270deg, #6847DA 0%, rgba(255, 255, 255, 0) 97.29%), #5F9AC8;
+    padding: 2px;
+    border-radius: 3px;
   }
 }
 section.signup-container, section.signin-container {
