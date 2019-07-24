@@ -2,12 +2,12 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
+  top: 75%;
   .scrolling-equipments-container {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
-    width: 85%;
+    width: 95%;
     padding: 10px;
     -webkit-overflow-scrolling: touch;
     &::-webkit-scrollbar {
