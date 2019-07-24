@@ -4,3 +4,11 @@
   right: 16px;
   z-index: 1000;
 }
+.alert-warning, .alert-info {
+  color: white;
+  background-color: #454E72;
+  border-color: #454E72;
+  button:hover {
+    color: white;
+  }
+}

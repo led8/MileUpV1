@@ -35,6 +35,10 @@ section.home-container {
     justify-content: flex-start;
     text-align: center;
     padding: 5px;
+    .text {
+      color: $main-gray;
+      font-size: $text-font-size;
+    }
     .wrapper {
       margin-top: 40%;
       width: 100%;
