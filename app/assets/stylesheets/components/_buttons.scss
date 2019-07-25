@@ -87,3 +87,19 @@
     cursor: pointer;
   }
 }
+
+.transparent-button {
+  padding: 10px 40px;
+  transition: all .3s ease-out;
+  color: white;
+  border-radius: 50px;
+  border: 2px solid white;
+  font-size: $button-font-size;
+  &:hover {
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    cursor: pointer;
+  }
+
+}

@@ -1,12 +1,16 @@
 <%= form_with(model: @user_profil, url: [@user, @user_profil], local: true, class: "profil") do |form| %>
 
   <div class="field">
-    <%= form.label :gender %>
-    <%= form.text_field :gender %>
+    <%= form.label "Êtes-vous un homme ou une femme ?" %>
+    <%= form.select :gender, options_for_select(['Un homme', 'Une femme'], '...') %>
   </div>
 
   <div id="profil">
-    <%= link_to 'Next', remote: true %>
+    <%= link_to remote: true do %>
+      <div class="transparent-button mt-5">
+        Valider
+      </div>
+    <% end %>
   </div>
 
 <% end %>

@@ -4,6 +4,10 @@ section.user-profil-container {
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   .user-profil-form {
     height: 100%;
     width: 100%;
@@ -14,6 +18,49 @@ section.user-profil-container {
     .field {
       display: flex;
       flex-direction: column;
+    }
+    form {
+      width: 50%;
+      #profil {
+        display: flex;
+        justify-content: center;
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+    label {
+      color: white;
+      font-weight: lighter;
+    }
+    input {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid $main-light-blue-gray;
+      margin-bottom: 20px;
+      &:focus {
+        outline: none;
+        color: $main-light-blue-gray;
+      }
+    }
+    select {
+      background: transparent;
+      border: none;
+      margin-bottom: 20px;
+      color: $main-light-blue-gray;
+    }
+  }
+}
+
+// RESPONSIVE VERSION //
+
+@media (max-width: 740px) {
+  section.user-profil-container {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    form {
+      width: 80% !important;
+      margin: auto;
     }
   }
 }
