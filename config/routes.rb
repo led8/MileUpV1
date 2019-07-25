@@ -3,11 +3,12 @@ Rails.application.routes.draw do
                                     registrations: 'registrations' }
   root to: 'pages#home'
 
-  ## TESTS
-  get 'test', to: 'users#test'
 
   ## USERS ROUTES
-  resources :users, only: [:show]
+  resources :users, only: [:show] do
+    ## REVIEWS ROUTES WITH AJAX
+    resources :user_profils, only: [:new, :create]
+  end
 
   ## FACEBOOK AUTHENTIFICATION
   authenticated :user do

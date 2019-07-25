@@ -1,0 +1,17 @@
+<%= form_with(model: @user_profil, url: [@user, @user_profil], local: true) do |form| %>
+
+  <div class="field">
+    <%= form.label :sport_frequencies %>
+    <%= form.text_field :sport_frequencies %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sport_interests %>
+    <%= form.text_field :sport_interests %>
+  </div>
+
+  <div id="next-form">
+    <%= link_to 'Next', remote: true %>
+  </div>
+
+<% end %>

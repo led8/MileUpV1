@@ -1,0 +1,12 @@
+<%= form_with(model: @user_profil, url: [@user, @user_profil], local: true, class: "profil") do |form| %>
+
+  <div class="field">
+    <%= form.label :gender %>
+    <%= form.text_field :gender %>
+  </div>
+
+  <div id="profil">
+    <%= link_to 'Next', remote: true %>
+  </div>
+
+<% end %>

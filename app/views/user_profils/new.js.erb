@@ -1,0 +1,16 @@
+function handleProfil() {
+  $('.profil').fadeOut(1000);
+  $('.user-profil-form').append("<%= j render './user_profils/partials/ask_for_profil', user: @user, user_profil: @user_profil %>");
+  $('.sport-profil').fadeIn(3000);
+}
+
+function handleSportProfil() {
+  $('#sport-profil a').click(function(event){
+    event.preventDefault();
+    $('.sport-profil').fadeOut('slow');
+    $('.user-profil-form').replaceWith("<%= j render './user_profils/partials/ask_for_sport_profil', user: @user, user_profil: @user_profil %>");
+  });
+}
+
+handleProfil();
+handleSportProfil()

@@ -1,0 +1,19 @@
+section.user-profil-container {
+  height: 100vh;
+  background-color: $main-blue-purple;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 50px;
+  .user-profil-form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .field {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
