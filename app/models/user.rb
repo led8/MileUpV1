@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: [:facebook]
 
+  has_one :user_profil
+
   validates :email, presence: true, uniqueness: true
 
   def self.from_omniauth(auth)
