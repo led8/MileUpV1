@@ -17,6 +17,8 @@ section.signin-container {
     height: 120px;
     .form-actions {
       margin: 0 !important;
+      display: flex;
+      justify-content: center;
     }
   }
   .forgot-password {
@@ -31,31 +33,67 @@ section.signin-container {
     font-weight: lighter;
     margin-top: 2rem;
   }
-  input[type="checkbox"]{
-    display: none;
+  .simple_form.new_user {
+    width: 100%;
+    label {
+      color: white;
+      font-weight: lighter;
+      abbr {
+        display: none;
+      }
+    }
   }
-  label {
-    cursor: pointer;
-    user-select: none;
+  .form-inputs {
+    width: 60%;
+    margin: auto;
+    input {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid $main-light-blue-gray;
+      &:focus {
+        outline: none;
+        color: $main-light-blue-gray;
+      }
+    }
+    input[type="checkbox"]{
+      display: none;
+    }
+    label {
+      cursor: pointer;
+      user-select: none;
+    }
+    input[type="checkbox"] + label:before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 1.2rem;
+      content: "\f0c8";
+      color: #1a1a33;
+      margin-right: 10px;
+    }
+    input[type="checkbox"]:checked + label:before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 1.2rem;
+      content: "\f00c";
+      color: white;
+      margin-right: 10px;
+      background: linear-gradient(270deg, #6847DA 0%, rgba(255, 255, 255, 0) 97.29%), #5F9AC8;
+      padding: 2px;
+      border-radius: 3px;
+    }
   }
-  input[type="checkbox"] + label:before {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-size: 1.2rem;
-    content: "\f0c8";
-    color: #1a1a33;
-    margin-right: 10px;
-  }
-  input[type="checkbox"]:checked + label:before {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-size: 1.2rem;
-    content: "\f00c";
+  .cgu-text {
+    width: 60%;
+    margin: auto;
+    font-size: .8rem;
     color: white;
-    margin-right: 10px;
-    background: linear-gradient(270deg, #6847DA 0%, rgba(255, 255, 255, 0) 97.29%), #5F9AC8;
-    padding: 2px;
-    border-radius: 3px;
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 section.signup-container {
