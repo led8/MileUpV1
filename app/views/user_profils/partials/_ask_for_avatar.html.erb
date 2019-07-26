@@ -1,0 +1,11 @@
+<%= simple_form_for [@user, @user_profil], :html => {:class => "avatar hidden"} do |f| %>
+  <div class="field">
+    <%= f.input :avatar, label: "Vous pouver choisir une photo" %>
+    <%= f.input :avatar_cache, as: :hidden %>
+  </div>
+
+  <div class="submit-user-form">
+    <%= f.button :submit, 'Valider le profil', class: "transparent-button" %>
+  </div>
+
+<% end %>

@@ -1,9 +1,41 @@
 <section class="user-profil-container">
-  <div class="milepu-logo">
+  <div class="mileup-logo">
     <%= svg('logo') %>
   </div>
   <div class="user-profil-form">
     <%= render './user_profils/partials/ask_for_gender', user: @user, user_profil: @user_profil %>
+  </div>
+
+  <div id="profil">
+    <%= link_to remote: true do %>
+      <div class="transparent-button">
+        Valider
+      </div>
+    <% end %>
+  </div>
+
+  <div id="sport-profil" class="hidden">
+    <%= link_to do %>
+      <div class="transparent-button">
+        Valider
+      </div>
+    <% end %>
+  </div>
+
+  <div id="sport-frequencies" class="hidden">
+    <%= link_to do %>
+      <div class="transparent-button">
+        Valider
+      </div>
+    <% end %>
+  </div>
+
+  <div id="sport-interests" class="hidden">
+    <%= link_to do %>
+      <div class="transparent-button">
+        Valider
+      </div>
+    <% end %>
   </div>
 
 </section>

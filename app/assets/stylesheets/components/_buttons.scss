@@ -95,11 +95,13 @@
   border-radius: 50px;
   border: 2px solid white;
   font-size: $button-font-size;
+  background: linear-gradient(to right, white 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
   &:hover {
-    color: white;
+    color: $main-blue-purple;
     text-decoration: none;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    background-position: left bottom;
     cursor: pointer;
   }
-
 }

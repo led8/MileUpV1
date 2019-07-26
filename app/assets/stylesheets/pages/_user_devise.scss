@@ -46,7 +46,7 @@ section.signin-container {
   .form-inputs {
     width: 60%;
     margin: auto;
-    input {
+    input[type="email"], input[type="password"] {
       background: transparent;
       border: none;
       border-bottom: 1px solid $main-light-blue-gray;
@@ -125,7 +125,7 @@ section.signup-container {
     .form-inputs {
       width: 60%;
       margin: auto;
-      input {
+      input[type="email"], input[type="password"] {
         background: transparent;
         border: none;
         border-bottom: 1px solid $main-light-blue-gray;
