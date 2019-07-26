@@ -1,22 +1,17 @@
-<%= form_with(model: @user_profil, url: [@user, @user_profil], local: true, class: "sport-profil hidden") do |form| %>
+<%= simple_form_for [@user, @user_profil], :html => {:class => "sport-profil hidden"} do |f| %>
 
   <div class="field">
-    <%= form.label :age %>
-    <%= form.text_field :age %>
-  </div>
-
-  <div class="field">
-    <%= form.label :size %>
-    <%= form.text_field :size %>
-  </div>
-
-  <div class="field">
-    <%= form.label :weight %>
-    <%= form.text_field :weight %>
+    <%= f.input :age,
+                collection: 12..70,
+                label: "Si tu souhaites m'indiquer ton âge : " %>
   </div>
 
   <div id="sport-profil">
-    <%= link_to 'Next', remote: true %>
+    <%= link_to do %>
+      <div class="transparent-button mt-5">
+        Valider
+      </div>
+    <% end %>
   </div>
 
 <% end %>

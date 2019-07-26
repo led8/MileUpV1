@@ -1,16 +1,33 @@
 function handleProfil() {
-  $('.profil').fadeOut(1000);
+  $('.profil').fadeOut(200);
   $('.user-profil-form').append("<%= j render './user_profils/partials/ask_for_profil', user: @user, user_profil: @user_profil %>");
-  $('.sport-profil').fadeIn(3000);
+  setTimeout(function(){
+    $('.sport-profil').fadeIn(200);
+  }, 300)
 }
 
-function handleSportProfil() {
+function handleSportFrequencies() {
   $('#sport-profil a').click(function(event){
     event.preventDefault();
-    $('.sport-profil').fadeOut('slow');
-    $('.user-profil-form').replaceWith("<%= j render './user_profils/partials/ask_for_sport_profil', user: @user, user_profil: @user_profil %>");
+    $('.sport-profil').fadeOut(200);
+    $('.user-profil-form').append("<%= j render './user_profils/partials/ask_for_sport_frequencies', user: @user, user_profil: @user_profil %>");
+    setTimeout(function(){
+      $('.sport-frequencies').fadeIn(200);
+    }, 300)
+  });
+}
+
+function handleSportInterests() {
+  $('#sport-frequencies a').click(function(event){
+    event.preventDefault();
+    $('.sport-frequencies').fadeOut(200);
+    $('.user-profil-form').append("<%= j render './user_profils/partials/ask_for_sport_interests', user: @user, user_profil: @user_profil %>");
+    setTimeout(function(){
+      $('.sport-interests').fadeIn(200);
+    }, 300)
   });
 }
 
 handleProfil();
-handleSportProfil()
+handleSportFrequencies();
+handleSportInterests();

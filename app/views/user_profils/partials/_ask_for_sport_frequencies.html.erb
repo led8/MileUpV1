@@ -1,0 +1,17 @@
+<%= simple_form_for [@user, @user_profil], :html => {:class => "sport-frequencies hidden"} do |f| %>
+
+  <div class="field">
+    <%= f.input :sport_frequencies,
+                collection: @collection,
+                label: "A quelle fréquence pratiques-tu une activité physique : " %>
+  </div>
+
+  <div id="sport-frequencies">
+    <%= link_to do %>
+      <div class="transparent-button mt-5">
+        Valider
+      </div>
+    <% end %>
+  </div>
+
+<% end %>

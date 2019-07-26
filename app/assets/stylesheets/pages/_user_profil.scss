@@ -15,13 +15,9 @@ section.user-profil-container {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .field {
-      display: flex;
-      flex-direction: column;
-    }
     form {
       width: 50%;
-      #profil {
+      #profil, #sport-profil, #sport-frequencies, #sport-interests {
         display: flex;
         justify-content: center;
         a {
@@ -29,11 +25,20 @@ section.user-profil-container {
         }
       }
     }
+    .field {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     label {
       color: white;
       font-weight: lighter;
+      cursor: pointer;
+      user-select: none;
     }
     input {
+      width: 100%;
       background: transparent;
       border: none;
       border-bottom: 1px solid $main-light-blue-gray;
@@ -43,11 +48,32 @@ section.user-profil-container {
         color: $main-light-blue-gray;
       }
     }
+    input[type="radio"]{
+      display: none;
+    }
+    input[type="radio"] + label:before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 1.2rem;
+      content: "\f111";
+      color: #1a1a33;
+      margin-right: 10px;
+    }
+    input[type="radio"]:checked + label:before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 1.2rem;
+      content: "\f00c";
+      color: white;
+      margin-right: 10px;
+      background: linear-gradient(270deg, #6847DA 0%, rgba(255, 255, 255, 0) 97.29%), #5F9AC8;
+      padding: 2px;
+      border-radius: 50%;
+    }
     select {
       background: transparent;
-      border: none;
-      margin-bottom: 20px;
       color: $main-light-blue-gray;
+      border: none;
     }
   }
 }

@@ -2,6 +2,7 @@ class UserProfilsController < ApplicationController
   def new
     @user = current_user
     @user_profil = UserProfil.new
+    @collection = ["Je ne sais pas", "Jamais", "1 à 2 fois par semaine", "3 à 4 fois par semaine", "5 fois par semaine ou plus"]
   end
 
   def create
