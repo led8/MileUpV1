@@ -26,6 +26,8 @@ class UserProfilsController < ApplicationController
   private
 
   def user_profil_params
-    params.require(:user_profil).permit(:gender, :age, :size, :weight, :sport_frequencies, :sport_interests, :home_address, :work_address, :avatar, :confirmation_informations, :first_name, :last_name)
+    params.require(:user_profil).permit(:gender, :age, :size, :weight, :sport_frequencies, :sport_interests,
+                                        :home_address, :work_address, :avatar, :confirmation_informations,
+                                        :first_name, :last_name)
   end
 end
