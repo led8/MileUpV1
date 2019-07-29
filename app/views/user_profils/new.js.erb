@@ -1,21 +1,72 @@
+// START AJAX FORM --> QUESTION 1 //
 $('#start-form a').parent().html("<%= j render './user_profils/partials/form', user: @user, user_profil: @user_profil %>")
 
+// QUESTION ABOUT AGE //
+  // ** user validate ** //
 $('#next-to-age a').click(function(event) {
   event.preventDefault();
+
   $('.form-about-age').removeClass('hidden');
+  $('.form-about-age').find('.field').removeClass('hidden');
+  $('.form-about-gender').addClass('hidden');
 })
 
-$('#next-1 a').click(function(event) {
+  // ** user pass ** //
+$('#pass-to-age a').click(function(event) {
+  event.preventDefault();
+
+  $('.form-about-age').removeClass('hidden');
+  $('.form-about-age').find('.field').removeClass('hidden');
+  $('.form-about-gender').addClass('hidden');
+})
+
+// QUESTION ABOUT FREQUENCIES //
+  // ** user validate ** //
+$('#next-to-frequencies a').click(function(event) {
   event.preventDefault();
   $('.form-about-frequencies').removeClass('hidden');
+  $('.form-about-frequencies').find('.field').removeClass('hidden');
+  $('.form-about-age').addClass('hidden');
 })
 
-$('#next-2 a').click(function(event) {
+  // ** user pass ** //
+$('#pass-to-frequencies a').click(function(event) {
+  event.preventDefault();
+  $('.form-about-frequencies').removeClass('hidden');
+  $('.form-about-frequencies').find('.field').removeClass('hidden');
+  $('.form-about-age').addClass('hidden');
+})
+
+// QUESTION ABOUT INTERESTS //
+  // ** user validate ** //
+$('#next-to-interests a').click(function(event) {
   event.preventDefault();
   $('.form-about-interests').removeClass('hidden');
+  $('.form-about-interests').find('.field').removeClass('hidden');
+  $('.form-about-frequencies').addClass('hidden');
 })
 
-$('#next-3 a').click(function(event) {
+  // ** user pass ** //
+$('#pass-to-interests a').click(function(event) {
+  event.preventDefault();
+  $('.form-about-interests').removeClass('hidden');
+  $('.form-about-interests').find('.field').removeClass('hidden');
+  $('.form-about-frequencies').addClass('hidden');
+})
+
+// QUESTION AVATAR //
+  // ** user validate ** //
+$('#next-to-avatar a').click(function(event) {
   event.preventDefault();
   $('.form-about-avatar').removeClass('hidden');
+  $('.form-about-avatar').find('.field').removeClass('hidden');
+  $('.form-about-interests').addClass('hidden');
+})
+
+  // ** user pass ** //
+$('#pass-to-avatar a').click(function(event) {
+  event.preventDefault();
+  $('.form-about-avatar').removeClass('hidden');
+  $('.form-about-avatar').find('.field').removeClass('hidden');
+  $('.form-about-interests').addClass('hidden');
 })

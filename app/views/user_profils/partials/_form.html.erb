@@ -1,67 +1,92 @@
 <%= form_with(model: @user_profil, url: [@user, @user_profil], local: true) do |form| %>
-  <div class="field">
-    <%= form.radio_button :gender, "Un homme" %>
-    <%= form.label :gender_un_homme, "Un homme" %>
 
-    <%= form.radio_button :gender, "Une femme" %>
-    <%= form.label :gender_une_femme, "Une femme" %>
+  <!-- GENDER -->
+
+  <div class="form-about-gender">
+    <h3 class="text-about-gender text-white">
+      Vous êtes
+    </h3>
+
+    <div class="field">
+      <%= form.radio_button :gender, "Un homme" %>
+      <%= form.label :gender_un_homme, "Un homme" %>
+
+      <%= form.radio_button :gender, "Une femme" %>
+      <%= form.label :gender_une_femme, "Une femme" %>
+    </div>
+
+    <div class="buttons-container">
+      <div id="pass-to-age"><%= link_to "Passer" %></div>
+      <div id="next-to-age"><%= link_to "Valider" %></div>
+    </div>
+
   </div>
 
-  <div id="next-to-age">
-    <%= link_to "Valider" %>
-  </div>
+  <!-- AGE -->
 
   <div class="form-about-age hidden">
+    <h3 class="text-about-age text-white">
+      Vous êtes âgé de
+    </h3>
+
     <div class="field">
-      <%= form.select :age, options_for_select(12..70) %>
+      <%= form.select :age, options_for_select(@age) %>
     </div>
 
-    <div id="next-1">
-      <%= link_to do %>
-        <div class="transparent-button">
-          next-1
-        </div>
-      <% end %>
+    <div class="buttons-container">
+      <div id="pass-to-frequencies"><%= link_to "Passer" %></div>
+      <div id="next-to-frequencies"><%= link_to "Valider" %></div>
     </div>
   </div>
 
+  <!-- SPORT FREQUENCIES -->
 
   <div class="form-about-frequencies hidden">
+    <h3 class="text-about-frequencies text-white">
+      Vous pratiquez une activité physique
+    </h3>
+
     <div class="field">
       <%= form.select :sport_frequencies, options_for_select(@collection) %>
     </div>
 
-    <div id="next-2">
-      <%= link_to do %>
-        <div class="transparent-button">
-          next-2
-        </div>
-      <% end %>
+    <div class="buttons-container">
+      <div id="pass-to-interests"><%= link_to "Passer" %></div>
+      <div id="next-to-interests"><%= link_to "Valider" %></div>
     </div>
   </div>
 
+  <!-- SPORT INTERESTS -->
 
   <div class="form-about-interests hidden">
+    <h3 class="text-about-interests text-white">
+      Pourquoi aimez-vous faire du sport ?
+    </h3>
+
     <div class="field">
       <%= form.text_field :sport_interests, label: "Quel intérêt recherches-tu dans le sport : " %>
     </div>
 
-    <div id="next-3">
-      <%= link_to do %>
-        <div class="transparent-button">
-          next-3
-        </div>
-      <% end %>
+    <div class="buttons-container">
+      <div id="pass-to-avatar"><%= link_to "Passer" %></div>
+      <div id="next-to-avatar"><%= link_to "Valider" %></div>
     </div>
   </div>
 
+  <!-- AVATAR -->
+
   <div class="form-about-avatar hidden">
+    <h3 class="text-about-frequencies text-white">
+      Choisissez une photo
+    </h3>
+
     <div class="field">
       <%= form.file_field :avatar %>
     </div>
-    <div class="submit-user-form">
-      <%= form.submit 'Valider le profil', class: "transparent-button" %>
+    <div class="submit-user-form mt-5">
+      <%= form.submit 'Valider le profil', class: "login-button" %>
     </div>
   </div>
 
 <% end %>
+

@@ -7,11 +7,11 @@ function handleOnboardingAnimation() {
     $(logo).fadeIn(1000, function(){$(this).removeClass('hidden')});
   }, 500);
   setTimeout(function(){
-    $(text).fadeIn(500, function(){$(this).removeClass('hidden')});
-  }, 700);
+    $(text).fadeIn(1000, function(){$(this).removeClass('hidden')});
+  }, 500);
   setTimeout(function(){
     $(button).fadeIn(500, function(){$(this).removeClass('hidden')});
-  }, 1400)
+  }, 1700)
 }
 
 // METHODS CALL //

@@ -29,6 +29,10 @@ section.user-profil-container {
     form {
       width: 50%;
     }
+    .text-about-gender, .text-about-age, .text-about-frequencies, .text-about-interests, .text-about-avatar {
+      margin-bottom: 30px;
+      text-align: center;
+    }
     .field {
       width: 100%;
       display: flex;
@@ -42,7 +46,7 @@ section.user-profil-container {
       user-select: none;
     }
     input[type="file"] {
-      display: none;
+      // display: none;
       color: $main-light-blue-gray;
     }
     input[type="text"] {
@@ -83,18 +87,21 @@ section.user-profil-container {
       color: $main-light-blue-gray;
       border: none;
     }
-    .submit-user-form {
-      display: flex;
-      justify-content: center;
-    }
     .mileup-welcoming-text {
       position: absolute;
       top: 40%;
       font-size: $header-font-size;
     }
-    #next-to-age {
+    .buttons-container {
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-around;
+      position: absolute;
+      top: 65%;
+      width: 70%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    #next-to-age, #next-to-frequencies, #next-to-interests, #next-to-avatar {
       a {
         color: white;
         display: flex;
@@ -107,6 +114,15 @@ section.user-profil-container {
         }
       }
     }
+    #pass-to-age, #pass-to-frequencies, #pass-to-interests, #pass-to-avatar {
+      a {
+        color: white;
+      }
+    }
+  }
+  .submit-user-form {
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -128,6 +144,15 @@ section.user-profil-container {
     }
     .mileup-welcoming-text {
       top: 38% !important;
+    }
+    .buttons-container {
+      top: 90% !important;
+      justify-content: space-between !important;
+    }
+    #start-form {
+      .transparent-button {
+        margin-top: 250%;
+      }
     }
   }
 }
