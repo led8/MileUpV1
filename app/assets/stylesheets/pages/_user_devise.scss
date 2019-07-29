@@ -1,6 +1,6 @@
 section.signin-container {
   height: 100vh;
-  background-color: $main-blue-purple;
+  background-color: $dark-blue;
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 50px;
@@ -23,7 +23,7 @@ section.signin-container {
   }
   .forgot-password {
     font-size: .8rem;
-    color: $main-light-blue-gray;
+    color: $light-blue-2;
   }
   .form-check {
     margin-top: 1rem;
@@ -49,10 +49,10 @@ section.signin-container {
     input[type="email"], input[type="password"] {
       background: transparent;
       border: none;
-      border-bottom: 1px solid $main-light-blue-gray;
+      border-bottom: 1px solid $light-blue-2;
       &:focus {
         outline: none;
-        color: $main-light-blue-gray;
+        color: $light-blue-2;
       }
     }
     input[type="checkbox"]{
@@ -98,7 +98,7 @@ section.signin-container {
 }
 section.signup-container {
   height: 100%;
-  background-color: $main-blue-purple;
+  background-color: $dark-blue;
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 50px;
@@ -128,10 +128,10 @@ section.signup-container {
       input[type="email"], input[type="password"] {
         background: transparent;
         border: none;
-        border-bottom: 1px solid $main-light-blue-gray;
+        border-bottom: 1px solid $light-blue-2;
         &:focus {
           outline: none;
-          color: $main-light-blue-gray;
+          color: $light-blue-2;
         }
       }
       input[type="checkbox"]{
@@ -183,7 +183,7 @@ section.signup-container {
      }
     .text-muted {
       font-size: .8rem;
-      color: $main-light-blue-gray !important;
+      color: $light-blue-2 !important;
     }
   }
   .form-check {

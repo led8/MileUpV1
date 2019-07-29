@@ -1,6 +1,6 @@
 section.user-profil-container {
   height: 100vh;
-  background-color: $main-blue-purple;
+  background-color: $dark-blue;
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 50px;
@@ -50,18 +50,18 @@ section.user-profil-container {
     }
     input[type="file"] {
       // display: none;
-      color: $main-light-blue-gray;
+      color: $light-blue-2;
     }
     input[type="text"] {
       width: 100%;
       background: transparent;
       border: none;
-      border-bottom: 1px solid $main-light-blue-gray;
+      border-bottom: 1px solid $light-blue-2;
       margin-bottom: 20px;
       text-align: center;
       &:focus {
         outline: none;
-        color: $main-light-blue-gray;
+        color: $light-blue-2;
       }
     }
     input[type="radio"]{
@@ -88,7 +88,7 @@ section.user-profil-container {
     }
     select {
       background: transparent;
-      color: $main-light-blue-gray;
+      color: $light-blue-2;
       border: none;
       outline: none;
     }

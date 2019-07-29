@@ -10,7 +10,7 @@
     justify-content: space-evenly;
     i {
       font-size: 2rem;
-      color: $main-blue-purple;
+      color: $dark-blue;
       &:hover {
         cursor: pointer;
       }
@@ -57,21 +57,9 @@
           display: flex;
           justify-content: center;
           font-size: $small-font-size;
-          color: $main-gray;
+          color: $blue-gray;
         }
       }
     }
   }
 }
-
-// RESPONSIVE //
-
-// @media(max-width: 900px) {
-//   .scrolling-equipments-container {
-//     width: 100% !important;
-//     .equipment-card {
-//       // width: 250px !important;
-//       // height: 100px !important;
-//     }
-//   }
-// }

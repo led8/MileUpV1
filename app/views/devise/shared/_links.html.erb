@@ -1,9 +1,9 @@
 <%- if controller_name != 'sessions' %>
-  <%= link_to "Déjà membre ?", new_session_path(resource_name), class: "text-white" %>
+  <%= link_to "Déjà membre ?", new_session_path(resource_name), class: "white-text" %>
 <% end %>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <u><%= link_to "Rejoingnez la communauté dès maintenant !", new_registration_path(resource_name), class: "text-white" %></u>
+  <u><%= link_to "Rejoingnez la communauté dès maintenant !", new_registration_path(resource_name), class: "white-text" %></u>
 <% end %>
 
 <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>

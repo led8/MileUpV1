@@ -36,7 +36,7 @@ section.home-container {
     text-align: center;
     padding: 5px;
     .text {
-      color: $main-gray;
+      color: $blue-gray;
       font-size: $text-font-size;
     }
     .wrapper {
@@ -46,7 +46,7 @@ section.home-container {
       flex-direction: column;
     }
     .text-container {
-      color: $main-light-blue-gray;
+      color: $light-blue-2;
       font-size: $text-font-size;
       display: flex;
       flex-direction: column;
