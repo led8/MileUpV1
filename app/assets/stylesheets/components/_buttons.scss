@@ -64,6 +64,9 @@
   transition: all .3s ease-out;
   box-shadow: 1px 1px 25px #7AEE9E;
   font-size: $button-font-size;
+  a {
+    text-decoration: none
+  }
   &:hover {
     text-decoration: none;
     color: white;
@@ -90,7 +93,6 @@
 
 .transparent-button {
   padding: 10px 40px;
-  transition: all .3s ease-out;
   color: white;
   border-radius: 50px;
   border: 2px solid white;
@@ -99,6 +101,7 @@
   background-size: 200% 100%;
   background-position: right bottom;
   &:hover {
+    transition: all .3s ease-out;
     color: $main-blue-purple;
     text-decoration: none;
     background-position: left bottom;

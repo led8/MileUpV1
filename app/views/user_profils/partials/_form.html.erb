@@ -1,0 +1,67 @@
+<%= form_with(model: @user_profil, url: [@user, @user_profil], local: true) do |form| %>
+  <div class="field">
+    <%= form.radio_button :gender, "Un homme" %>
+    <%= form.label :gender_un_homme, "Un homme" %>
+
+    <%= form.radio_button :gender, "Une femme" %>
+    <%= form.label :gender_une_femme, "Une femme" %>
+  </div>
+
+  <div id="next-to-age">
+    <%= link_to "Valider" %>
+  </div>
+
+  <div class="form-about-age hidden">
+    <div class="field">
+      <%= form.select :age, options_for_select(12..70) %>
+    </div>
+
+    <div id="next-1">
+      <%= link_to do %>
+        <div class="transparent-button">
+          next-1
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+
+  <div class="form-about-frequencies hidden">
+    <div class="field">
+      <%= form.select :sport_frequencies, options_for_select(@collection) %>
+    </div>
+
+    <div id="next-2">
+      <%= link_to do %>
+        <div class="transparent-button">
+          next-2
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+
+  <div class="form-about-interests hidden">
+    <div class="field">
+      <%= form.text_field :sport_interests, label: "Quel intérêt recherches-tu dans le sport : " %>
+    </div>
+
+    <div id="next-3">
+      <%= link_to do %>
+        <div class="transparent-button">
+          next-3
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="form-about-avatar hidden">
+    <div class="field">
+      <%= form.file_field :avatar %>
+    </div>
+    <div class="submit-user-form">
+      <%= form.submit 'Valider le profil', class: "transparent-button" %>
+    </div>
+  </div>
+
+<% end %>

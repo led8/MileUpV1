@@ -1,53 +1,21 @@
-function handleProfil() {
-  $('.profil').fadeOut(200);
-  $('#profil').fadeOut(200);
-  $('.user-profil-form').append("<%= j render './user_profils/partials/ask_for_profil', user: @user, user_profil: @user_profil %>");
-  setTimeout(function(){
-    $('.sport-profil').fadeIn(200);
-    $('#sport-profil').fadeIn(200);
-  }, 300)
-}
+$('#start-form a').parent().html("<%= j render './user_profils/partials/form', user: @user, user_profil: @user_profil %>")
 
-function handleSportFrequencies() {
-  $('#sport-profil a').click(function(event){
-    event.preventDefault();
-    $('.sport-profil').fadeOut(200);
-    $('#sport-profil').fadeOut(200);
-    $('.user-profil-form').append("<%= j render './user_profils/partials/ask_for_sport_frequencies', user: @user, user_profil: @user_profil %>");
-    setTimeout(function(){
-      $('.sport-frequencies').fadeIn(200);
-      $('#sport-frequencies').fadeIn(200);
-    }, 300)
-  });
-}
+$('#next-to-age a').click(function(event) {
+  event.preventDefault();
+  $('.form-about-age').removeClass('hidden');
+})
 
-function handleSportInterests() {
-  $('#sport-frequencies a').click(function(event){
-    event.preventDefault();
-    $('.sport-frequencies').fadeOut(200);
-    $('#sport-frequencies').fadeOut(200);
-    $('.user-profil-form').append("<%= j render './user_profils/partials/ask_for_sport_interests', user: @user, user_profil: @user_profil %>")
-    setTimeout(function(){
-      $('.sport-interests').fadeIn(200);
-      $('#sport-interests').fadeIn(200);
-    }, 300)
-  })
-}
+$('#next-1 a').click(function(event) {
+  event.preventDefault();
+  $('.form-about-frequencies').removeClass('hidden');
+})
 
-function handleAvatar() {
-  $('#sport-interests a').click(function(event){
-    event.preventDefault();
-    $('.sport-interests').fadeOut(200);
-    $('#sport-interests').fadeOut(200);
-    $('.user-profil-form').append("<%= j render './user_profils/partials/ask_for_avatar', user: @user, user_profil: @user_profil %>")
-    setTimeout(function(){
-      $('.avatar').fadeIn(200);
-      $('#avatar').fadeIn(200);
-    }, 300)
-  })
-}
+$('#next-2 a').click(function(event) {
+  event.preventDefault();
+  $('.form-about-interests').removeClass('hidden');
+})
 
-handleProfil();
-handleSportFrequencies();
-handleSportInterests();
-handleAvatar();
+$('#next-3 a').click(function(event) {
+  event.preventDefault();
+  $('.form-about-avatar').removeClass('hidden');
+})

@@ -11,19 +11,21 @@ section.user-profil-container {
   .mileup-logo {
     position: absolute;
     top: 15%;
-  }
-  #profil, #sport-profil, #sport-frequencies, #sport-interests, #avatar {
-    a {
-      text-decoration: none;
+    svg {
+      width: 200px;
+      height: 200px;
     }
   }
-  .user-profil-form {
-    height: 30%;
-    width: 100%;
+  #start-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 30%;
+    width: 100%;
+    a {
+      text-decoration: none
+    }
     form {
       width: 50%;
     }
@@ -85,6 +87,26 @@ section.user-profil-container {
       display: flex;
       justify-content: center;
     }
+    .mileup-welcoming-text {
+      position: absolute;
+      top: 40%;
+      font-size: $header-font-size;
+    }
+    #next-to-age {
+      display: flex;
+      justify-content: flex-end;
+      a {
+        color: white;
+        display: flex;
+        &:after {
+          content: "\f061";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          color: white;
+          margin-left: 10px;
+        }
+      }
+    }
   }
 }
 
@@ -97,6 +119,15 @@ section.user-profil-container {
     form {
       width: 80% !important;
       margin: auto;
+    }
+    .mileup-logo {
+      svg {
+        width: 136px;
+        height: 110px;
+      }
+    }
+    .mileup-welcoming-text {
+      top: 38% !important;
     }
   }
 }

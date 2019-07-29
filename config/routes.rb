@@ -3,10 +3,9 @@ Rails.application.routes.draw do
                                     registrations: 'registrations' }
   root to: 'pages#home'
 
-
   ## USERS ROUTES
-  resources :users, only: [:show] do
-    ## REVIEWS ROUTES WITH AJAX
+  resources :users, only: [:index, :show] do
+    ## USER_PROFILS ROUTES WITH AJAX
     resources :user_profils, only: [:new, :create]
   end
 

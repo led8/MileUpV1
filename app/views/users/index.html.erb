@@ -1,0 +1,16 @@
+<section class="user-profil-container">
+  <div class="mileup-logo hidden">
+    <%= svg('logo') %>
+  </div>
+
+  <div id="start-form">
+    <div class="mileup-welcoming-text text-white hidden">
+      Bienvenue !
+    </div>
+    <%= link_to new_user_user_profil_path(current_user), remote: true  do %>
+      <div class="transparent-button hidden">
+        Continuer
+      </div>
+    <% end %>
+  </div>
+</section>

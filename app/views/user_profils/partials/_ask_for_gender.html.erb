@@ -1,7 +1,0 @@
-<%= simple_form_for [@user, @user_profil], :html => {:class => "profil"} do |f| %>
-  <div class="field">
-    <h6 class="text-white">Faisons connaissance, tu es plutôt :</h6>
-    <%= f.collection_radio_buttons :gender, [["Un homme", "Un homme"], ["Une femme", "Une femme"]], :first, :last %>
-  </div>
-<% end %>
-
