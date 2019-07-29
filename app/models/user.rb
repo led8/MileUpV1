@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: [:facebook]
 
-  has_one :user_profil
+  has_one :user_profil, dependent: :destroy
 
   validates :email, presence: true, uniqueness: true
 
