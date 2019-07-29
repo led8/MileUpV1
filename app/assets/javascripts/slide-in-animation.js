@@ -1,3 +1,5 @@
+// FUNCTIONS //
+
 function debounce(func, wait = 20, immediate = true) {
   var timeout;
   return function() {
@@ -47,6 +49,7 @@ function handleContents(e) {
   })
 }
 
+// METHODS CALL //
 
 // window.addEventListener('scroll', debounce(handleImages));
 window.addEventListener('scroll', debounce(handleContents));

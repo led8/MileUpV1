@@ -1,7 +1,11 @@
+// VARIABLES //
+
 var leftPaddle = $('#left-paddle'),
     rightPaddle = $('#right-paddle'),
     equipmentsContainer = $('.scrolling-equipments-container'),
     oneCardWidth = $('.equipment-card').first().width();
+
+// FUNCTIONS //
 
 function handleLeftPaddle(event) {
   event.preventDefault();
@@ -16,6 +20,8 @@ function handleRightPaddle(event) {
     scrollLeft: `-=${oneCardWidth+50}`
   }, 800);
 }
+
+// METHODS CALL //
 
 $(document).ready(function() {
   $(leftPaddle).click(function(event){

@@ -1,3 +1,5 @@
+// FUNCTIONS //
+
 function handleOnboardingAnimation() {
   var logo = $('.user-profil-container').find('.mileup-logo');
   var text = $('.user-profil-container').find('.mileup-welcoming-text');
