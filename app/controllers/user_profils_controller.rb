@@ -4,7 +4,8 @@ class UserProfilsController < ApplicationController
     @user_profil = UserProfil.new
 
     @age = (15..70)
-    @collection = ["1 à 2 fois par semaine", "3 à 4 fois par semaine", "5 fois par semaine ou plus", "Je ne sais pas", "Jamais"]
+    @sport_frequencies = ["1 à 2 fois par semaine", "3 à 4 fois par semaine", "5 fois par semaine ou plus", "Je ne sais pas", "Jamais"]
+    @sport_interests = ["Pour ma santé", "Pour la performance", "Pour le plaisir", "Pour me défouler", "Me retrouver entre amis", "Me retrouver en famille"]
   end
 
   def create
@@ -25,6 +26,6 @@ class UserProfilsController < ApplicationController
   private
 
   def user_profil_params
-    params.require(:user_profil).permit(:gender, :age, :size, :weight, :sport_frequencies, :sport_interests, :home_address, :work_address, :avatar, :confirmation_informations)
+    params.require(:user_profil).permit(:gender, :age, :size, :weight, :sport_frequencies, :sport_interests, :home_address, :work_address, :avatar, :confirmation_informations, :first_name, :last_name)
   end
 end

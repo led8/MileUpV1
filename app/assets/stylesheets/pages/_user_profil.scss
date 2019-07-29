@@ -29,7 +29,7 @@ section.user-profil-container {
     form {
       width: 50%;
     }
-    .text-about-gender, .text-about-age, .text-about-frequencies, .text-about-interests, .text-about-avatar {
+    .text-about-first-name, .text-about-gender, .text-about-age, .text-about-frequencies, .text-about-interests, .text-about-avatar {
       margin-bottom: 30px;
       text-align: center;
     }
@@ -45,6 +45,9 @@ section.user-profil-container {
       cursor: pointer;
       user-select: none;
     }
+    input {
+      outline: none;
+    }
     input[type="file"] {
       // display: none;
       color: $main-light-blue-gray;
@@ -55,6 +58,7 @@ section.user-profil-container {
       border: none;
       border-bottom: 1px solid $main-light-blue-gray;
       margin-bottom: 20px;
+      text-align: center;
       &:focus {
         outline: none;
         color: $main-light-blue-gray;
@@ -86,6 +90,7 @@ section.user-profil-container {
       background: transparent;
       color: $main-light-blue-gray;
       border: none;
+      outline: none;
     }
     .mileup-welcoming-text {
       position: absolute;
@@ -101,7 +106,7 @@ section.user-profil-container {
       left: 50%;
       transform: translateX(-50%);
     }
-    #next-to-age, #next-to-frequencies, #next-to-interests, #next-to-avatar {
+    #next-to-gender, #next-to-age, #next-to-frequencies, #next-to-interests, #next-to-avatar {
       a {
         color: white;
         display: flex;

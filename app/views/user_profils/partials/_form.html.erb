@@ -1,8 +1,27 @@
 <%= form_with(model: @user_profil, url: [@user, @user_profil], local: true) do |form| %>
 
+  <!-- FIRST_NAME -->
+
+  <div class="form-about-first-name">
+    <h3 class="text-about-first-name text-white">
+      Qui êtes-vous
+    </h3>
+
+    <div class="field">
+      <%= form.label :first_name, "Votre prénom" %>
+      <%= form.text_field :first_name %>
+    </div>
+
+    <div class="buttons-container">
+      <div id="pass-to-gender"></div>
+      <div id="next-to-gender" class="hidden"><%= link_to "Valider" %></div>
+    </div>
+
+  </div>
+
   <!-- GENDER -->
 
-  <div class="form-about-gender">
+  <div class="form-about-gender hidden">
     <h3 class="text-about-gender text-white">
       Vous êtes
     </h3>
@@ -47,7 +66,7 @@
     </h3>
 
     <div class="field">
-      <%= form.select :sport_frequencies, options_for_select(@collection) %>
+      <%= form.select :sport_frequencies, options_for_select(@sport_frequencies) %>
     </div>
 
     <div class="buttons-container">
@@ -60,11 +79,11 @@
 
   <div class="form-about-interests hidden">
     <h3 class="text-about-interests text-white">
-      Pourquoi aimez-vous faire du sport ?
+      Pourquoi pratiquez-vous une activité physique ?
     </h3>
 
     <div class="field">
-      <%= form.text_field :sport_interests, label: "Quel intérêt recherches-tu dans le sport : " %>
+      <%= form.select :sport_interests, options_for_select(@sport_interests) %>
     </div>
 
     <div class="buttons-container">
