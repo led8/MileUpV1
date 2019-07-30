@@ -6,7 +6,7 @@ class PagesController < ApplicationController
   def home
     @user = current_user
     if params[:query].present?
-      @equipments = InfoEquipment.where.not(lat: nil, lng: nil).where("activity @@ ?", "#{params[:query]}")
+      @equipments = InfoEquipment.where.not(lat: nil, lng: nil).search_by_activity("#{params[:query]}")
       @markers = @equipments.map do |equipment|
         { lat: equipment.lat, lng: equipment.lng }
       end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_30_121858) do
+ActiveRecord::Schema.define(version: 2019_07_30_165813) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2019_07_30_121858) do
     t.string "level"
     t.string "environment"
     t.string "name"
+    t.index ["activity"], name: "index_info_equipments_on_activity"
   end
 
   create_table "user_profils", force: :cascade do |t|
