@@ -12,7 +12,7 @@ const initUpdateNavbarOnScroll = () => {
 
   if (navbar) {
     window.addEventListener('scroll', () => {
-      if(window.scrollY >= (window.innerHeight / 2)) {
+      if(window.scrollY >= 50) {
         navbar.style.transform = 'translateY(0px)';
         setTimeout(function(){
           partnerLink.style.transform = `translateX(${-navbarItemWidth}px)`;

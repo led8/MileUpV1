@@ -47,8 +47,10 @@ class PagesController < ApplicationController
     InfoEquipment.destroy_all
     filepath = 'info_equipments.csv'
     CSV.foreach(filepath) do |row|
-      puts "#{row[2]}"
-      info_equipment = InfoEquipment.new(lat: "#{row[0]}", lng: "#{row[1]}", activity: "#{row[13]}", creation_date: "#{row[6]}")
+      info_equipment = InfoEquipment.new(lat: "#{row[0]}", lng: "#{row[1]}", address: "#{row[4]} #{row[3]}, #{row[24].to_i} #{row[17]}",
+                                          creation_date: "#{row[6]}", equipment_type: "#{row[12]}", activity: "#{row[13]}",
+                                          nb_equipments: "#{row[16].to_i}", level: "#{row[18]}", environment: "#{row[22]}",
+                                          name: "#{row[23]}")
       info_equipment.save
     end
     InfoEquipment.first.destroy
