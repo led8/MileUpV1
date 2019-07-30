@@ -9,6 +9,7 @@ AllCops:
     - 'support/**/*'
     - 'tmp/**/*'
     - 'test/**/*'
+    - 'Gemfile'
 
 ConditionalAssignment:
   Enabled: false
