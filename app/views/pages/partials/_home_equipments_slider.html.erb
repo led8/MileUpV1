@@ -1,24 +1,26 @@
-<div class="scrolling-wrapper absolute">
+<% if @equipments %>
+  <div class="scrolling-wrapper absolute">
 
-    <div class="arrow-container">
-      <i class="fas fa-chevron-left" id="left-paddle"></i>
-      <i class="fas fa-chevron-right" id="right-paddle"></i>
-    </div>
+      <div class="arrow-container">
+        <i class="fas fa-chevron-left" id="left-paddle"></i>
+        <i class="fas fa-chevron-right" id="right-paddle"></i>
+      </div>
 
-    <div class="scrolling-equipments-container">
-      <% @equipments.each do |equipment| %>
-        <div class="equipment-card" data-lat="<%= equipment.lat %>" data-lng="<%= equipment.lng %>">
-          <div class="illustration-card">
-            <!-- equipment.illustration -->
-          </div>
-          <div class="informations-card">
-            <div class="activity">
-              <%= equipment.activity %>
+      <div class="scrolling-equipments-container">
+        <% @equipments.each do |equipment| %>
+          <div class="equipment-card" data-lat="<%= equipment.lat %>" data-lng="<%= equipment.lng %>">
+            <div class="illustration-card">
+              <!-- equipment.illustration -->
             </div>
-            <!-- distance to walk -->
-            <!-- time to walk -->
+            <div class="informations-card">
+              <div class="activity">
+                <%= equipment.activity %>
+              </div>
+              <!-- distance to walk -->
+              <!-- time to walk -->
+            </div>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
-  </div>
+  <% end %>
