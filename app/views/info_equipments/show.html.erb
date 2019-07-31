@@ -1,0 +1,68 @@
+<section class="equipment-container">
+
+  <!-- BANNER -->
+
+  <div class="banner">
+
+    <div class="equipment-infos">
+
+      <div class="equipment-illustration-container">
+        <div class="equipment-illustration"></div>
+      </div>
+
+      <div class="equipment-name-container">
+        <div class="equipment-name white-text"><h1><%= @equipment.name %></h1></div>
+      </div>
+
+      <div class="equipment-address-container white-text">
+        <div class="equipment-address white-text"><%= @equipment.address %></div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- BLOCKS -->
+
+  <div class="blocks-container">
+
+    <!-- LEFT CONTAINER BLOCKS -->
+
+    <div class="left-container">
+
+      <!-- MAP CONTAINER -->
+
+      <div class="equipment-map-container">
+        <div id="equipment-map" data-marker="<%= @marker.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT CONTAINER BLOCKS -->
+
+    <div class="right-container">
+
+      <!-- EQUIPMENT ACTIVITY -->
+
+      <div class="equipment-activity">
+        <div class="top">
+          <h3 class="header">
+            Les activités proposées
+          </h3>
+        </div>
+        <div class="bottom">
+          <% sanitize_activity(@equipment.activity).each do |activity| %>
+            <div class="content">
+              <i class="fas fa-map-pin"></i>
+              <%= activity %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+

@@ -1,0 +1,80 @@
+section.equipment-container {
+  width: 100%;
+  height: 100%;
+  .banner {
+    width: 100%;
+    height: 500px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    .equipment-infos {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      width: 50%;
+      padding: 100px;
+      .equipment-illustration-container, .equipment-name-container, .equipment-address-container {
+        width: 100%;
+      }
+      .equipment-illustration {
+        width: 100px;
+        height: 100px;
+        background-color: gray;
+        border-radius: 5px;
+      }
+      .equipment-name {
+        text-shadow: 0px 0px 2px #000000;
+        font-weight: bolder;
+      }
+      .equipment-address {
+        text-shadow: 0px 0px 2px #000000;
+        font-size: $text-font-size;
+      }
+    }
+  }
+  .blocks-container {
+    padding: 50px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    .left-container {
+      height: 100%;
+      width: 60%;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .equipment-map-container {
+        width: 100%;
+        height: 300px;
+        border: 1px solid black;
+        padding: 20px;
+      }
+    }
+    .right-container {
+      height: 100%;
+      width: 40%;
+      padding: 25px;
+      display: flex;
+      justify-content: center;
+      .equipment-activity {
+        display: flex;
+        flex-direction: column;
+        padding: 25px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        .top, .bottom {
+          width: 100%;
+        }
+        .bottom {
+          display: flex;
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+}

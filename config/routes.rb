@@ -9,6 +9,9 @@ Rails.application.routes.draw do
     resources :user_profils, only: [:new, :create]
   end
 
+  ## EQUIPMENTS ROUTES
+  resources :info_equipments, only: [:show]
+
   ## FACEBOOK AUTHENTIFICATION
   authenticated :user do
     root 'pages#home', as: 'authenticated_root'

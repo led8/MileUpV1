@@ -1,3 +1,6 @@
+
+// MAP HOME //
+
 #map {
   width: 100%;
   height: 100%;
@@ -13,8 +16,14 @@
 .mapboxgl-popup {
   max-width: 200px;
 }
-
 .mapboxgl-popup-content {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
+}
+
+// MAP ON EQUIPMENT PAGE //
+
+#equipment-map {
+  width: 50%;
+  height: 100%;
 }
