@@ -10,3 +10,11 @@
 .mapboxgl-ctrl-bottom-left, .mapboxgl-ctrl-bottom-right {
   display: none;
 }
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
