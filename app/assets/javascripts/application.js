@@ -1,4 +1,5 @@
 //= require jquery
+//= require handle-equipment-filter
 //= require navbar
 //= require user-profil-onboarding
 //= require handle-paddles

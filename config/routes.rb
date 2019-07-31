@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { omniauth_callbacks: 'omniauth_callbacks',
                                     registrations: 'registrations' }
   root to: 'pages#home'
+  post '/filter_with_ajax', to: 'pages#filter_with_ajax'
 
   ## USERS ROUTES
   resources :users, only: [:index, :show] do

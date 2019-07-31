@@ -5,15 +5,18 @@ class PagesController < ApplicationController
 
   def home
     @user = current_user
-    if params[:query].present?
-      @equipments = InfoEquipment.where.not(lat: nil, lng: nil).search_by_activity("#{params[:query]}")
-      @markers = @equipments.map do |equipment|
+    render :home
+  end
+
+  def filter_with_ajax
+    @user = current_user
+    @equipments = InfoEquipment.where.not(lat: nil, lng: nil).search_by_activity("#{params["activity"]}")
+    @markers = @equipments.map do |equipment|
         { lat: equipment.lat, lng: equipment.lng,
           popUp: render_to_string(partial: "./pages/partials/popup_equipment", locals: { equipment: equipment })
         }
-      end
     end
-    render :home
+    render partial: "./pages/partials/home_equipments_slider"
   end
 
   ## CSV METHOD TO GENERATE MODEL ##

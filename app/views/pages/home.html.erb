@@ -1,39 +1,35 @@
 <section class="home-container">
 
   <div class="home-banner relative">
+
+    <!-- BANNER -->
+
     <div class="map-container">
+
+      <!-- LEFT CONTAINER -->
+
       <div class="left-container">
 
         <div class="wrapper">
 
-          <%= form_tag root_path, method: :get do %>
-            <%= text_field_tag :query,
-              params[:query],
-              class: "form-control",
-              placeholder: "Trouver une activité"
-            %>
-            <%= submit_tag "Search", class: "btn btn-primary" %>
-          <% end %>
+          <!-- FILTER CONTAINER -->
 
-<!--           <div class="mileup-logo">
-          </div> -->
+          <div class="filter-container">
 
-<!--           <% if !user_signed_in? %>
-            <div class="text-container">
-              <div class="text-top">Rejoignez la communauté Mile'Up</div>
-              <div class="text-between">et accédez facilement aux équipements</div>
-              <div class="text-bottom">sportifs de votre ville !</div>
-            </div>
-            <div class="login-link">
-              <%= link_to "Se connecter", new_user_session_path, class: "login-button" %>
-            </div>
-          <% else %>
-            <div class="text">Bienvenue <%= @user.email %>, <strong>baladez-vous sur notre carte</strong> 🚀</div>
-          <% end %> -->
+            <%= form_tag filter_with_ajax_path, method: :post, id: "filter-form" do %>
+              <%= tag.input type: "text", placeholder: "Trouver une activité", label: false, id: "find-activity", name: "activity",
+              class: "form-control" %>
+              <%= submit_tag "Search", class: "btn btn-primary" %>
+            <% end %>
+
+          </div>
 
         </div>
 
       </div>
+
+      <!-- RIGHT CONTAINER -->
+
       <div class="right-container">
         <div id="map"
             data-markers="<%= @markers.to_json %>"
@@ -41,8 +37,12 @@
       </div>
     </div>
 
+    <!-- EQUIPMENT LIST -->
+
     <%= render './pages/partials/home_equipments_slider' %>
   </div>
+
+  <!-- MILEUP PRESENTATION -->
 
   <%= render './pages/partials/mileup_slides' %>
 
