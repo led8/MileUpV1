@@ -1,4 +1,5 @@
 //= require jquery
+//= require navbar
 //= require user-profil-onboarding
 //= require handle-paddles
 //= require slide-in-animation

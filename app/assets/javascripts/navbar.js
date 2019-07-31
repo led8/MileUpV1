@@ -1,16 +1,14 @@
 const initUpdateNavbarOnScroll = () => {
   const navbar = document.getElementById('navbar'),
         partnerLink = document.getElementById('becoming-partner'),
-        navbarItem = document.querySelector('.nav-item'),
-        map = document.getElementById('map');
-
-  let navbarHeight = navbar.offsetHeight,
-      navbarItemWidth = navbarItem.offsetWidth,
-      mapHeight = map.offsetHeight;
+        navbarItem = document.querySelector('.nav-item');
 
   var navbarLoginButton = $('.navbar-login-button');
 
   if (navbar) {
+    let navbarHeight = navbar.offsetHeight,
+      navbarItemWidth = navbarItem.offsetWidth;
+
     window.addEventListener('scroll', () => {
       if(window.scrollY >= 50) {
         navbar.style.transform = 'translateY(0px)';
@@ -27,4 +25,4 @@ const initUpdateNavbarOnScroll = () => {
   }
 }
 
-export { initUpdateNavbarOnScroll };
+initUpdateNavbarOnScroll();
