@@ -7,4 +7,16 @@ module ApplicationHelper
       '(not found)'
     end
   end
+
+  def equipment_environment(equipment)
+    result = ""
+    if equipment.downcase.include?('intérieur')
+      result = "En #{equipment.downcase}"
+    elsif equipment.downcase.include?('extérieur')
+      result = "En #{equipment.downcase}"
+    elsif equipment.downcase.include?('découvert')
+      result = "En extérieur"
+    end
+    return result
+  end
 end

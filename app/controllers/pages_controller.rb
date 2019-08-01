@@ -15,13 +15,15 @@ class PagesController < ApplicationController
   end
 
   def filter_with_ajax
+    extract_params = params.extract!("utf8", "authenticity_token", "controller", "action")
     @user = current_user
-    @equipments = InfoEquipment.where.not(lat: nil, lng: nil).search_by_activity("#{params["activity"]}")
-    @markers = @equipments.map do |equipment|
-        { lat: equipment.lat, lng: equipment.lng,
-          popUp: render_to_string(partial: "./pages/partials/popup_equipment", locals: { equipment: equipment })
-        }
-    end
+
+    # @equipments = InfoEquipment.where.not(lat: nil, lng: nil).search_by_activity("#{params["raquette"]}")
+    # @markers = @equipments.map do |equipment|
+    #     { lat: equipment.lat, lng: equipment.lng,
+    #       popUp: render_to_string(partial: "./pages/partials/popup_equipment", locals: { equipment: equipment })
+    #     }
+    # end
     render partial: "./pages/partials/equipments_list"
   end
 

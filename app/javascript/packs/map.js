@@ -48,15 +48,6 @@ function handleEquipment(){
       type: type,
       data: $(form).serialize(),
       success: function(data){
-        const mapElement = document.getElementById('map');
-
-        if (mapElement) {
-          mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
-          const map = new mapboxgl.Map({
-            container: 'map',
-            style: "mapbox://styles/ledhuy/cjygzo2kc008n1cl539vyk7lg"
-          });
-        }
         $('.equipments-list').remove();
         $('.map').remove();
         $('.map-container').append(data);
