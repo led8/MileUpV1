@@ -1,0 +1,19 @@
+.popup-name {
+  color: $blue-gray;
+  font-size: $small-font-size;
+  font-weight: 600;
+}
+.popup-address {
+  color: $blue-gray;
+}
+.popup-link {
+  color: $purple;
+  font-weight: 600;
+  &:hover {
+    text-decoration: none;
+    color: $purple;
+  }
+}
+.mapboxgl-popup-content {
+  padding: 15px !important;
+}

@@ -27,6 +27,9 @@ section.home-container {
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
     overflow-x: scroll;
+    a:hover {
+      text-decoration: none;
+    }
     .card {
       flex: 1 1 300px;
       margin-right: 10px;
