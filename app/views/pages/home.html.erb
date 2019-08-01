@@ -6,9 +6,16 @@
 
       <!-- FILTER CONTAINER -->
 
+      <!-- <div class="filters-container fixed">
+        <%#= form_tag filter_with_ajax_path, method: :post, id: "filters-form" do %>
+          <%#= tag.input type: "text", placeholder: "Trouver une activité", label: false, id: "find-activity", name: "activity", class: "form-control search-form-with-ajax" %>
+          <%#= submit_tag "Rechercher", class: "btn btn-primary submit-with-ajax" %>
+        <% #end %>
+      </div> -->
+
       <div class="filters-container fixed">
-        <%= form_tag filter_with_ajax_path, method: :post, id: "filters-form" do %>
-          <%= tag.input type: "text", placeholder: "Trouver une activité", label: false, id: "find-activity", name: "activity", class: "form-control search-form-with-ajax" %>
+        <%= form_tag root_path, method: :get, class: "filters-form" do %>
+          <%= text_field_tag :query, params[:query], placeholder: "Trouver une activité", label: false, id: "find-activity", class: "form-control search-form-with-ajax" %>
           <%= submit_tag "Rechercher", class: "btn btn-primary submit-with-ajax" %>
         <% end %>
       </div>

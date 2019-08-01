@@ -5,12 +5,22 @@ class PagesController < ApplicationController
 
   def home
     @user = current_user
-     @equipments = InfoEquipment.where.not(lat: nil, lng: nil).first(10)
-     @markers = @equipments.map do |equipment|
-        { lat: equipment.lat, lng: equipment.lng,
-          popUp: render_to_string(partial: "./pages/partials/popup_equipment", locals: { equipment: equipment })
-        }
+    if params[:query].present?
+       @equipments = InfoEquipment.where.not(lat: nil, lng: nil).search_by_activity("#{params[:query]}")
+       @markers = @equipments.map do |equipment|
+          { lat: equipment.lat, lng: equipment.lng,
+            popUp: render_to_string(partial: "./pages/partials/popup_equipment", locals: { equipment: equipment })
+          }
+      end
+    # elsif params[:user_location].present?
+    #   @equipments = InfoEquipment.where.not(lat: nil, lng: nil).where("address ILIKE ? ", "#{params[:user_location]}")
+    #   @markers = @equipments.map do |equipment|
+    #       { lat: equipment.lat, lng: equipment.lng,
+    #         popUp: render_to_string(partial: "./pages/partials/popup_equipment", locals: { equipment: equipment })
+    #       }
+    #   end
     end
+    puts params
     render :home
   end
 
