@@ -2,44 +2,21 @@
 
   <div class="home-banner relative">
 
-    <!-- BANNER -->
-
     <div class="map-container">
 
-      <!-- LEFT CONTAINER -->
+      <!-- FILTER CONTAINER -->
 
-      <div class="left-container">
-
-        <div class="wrapper">
-
-          <!-- FILTER CONTAINER -->
-
-          <div class="filter-container">
-
-            <%= form_tag filter_with_ajax_path, method: :post, id: "filter-form" do %>
-              <%= tag.input type: "text", placeholder: "Trouver une activité", label: false, id: "find-activity", name: "activity",
-              class: "form-control" %>
-              <%= submit_tag "Search", class: "btn btn-primary" %>
-            <% end %>
-
-          </div>
-
-        </div>
-
+      <div class="filters-container absolute">
+        <%= form_tag filter_with_ajax_path, method: :post, id: "filters-form" do %>
+          <%= tag.input type: "text", placeholder: "Trouver une activité", label: false, id: "find-activity", name: "activity", class: "form-control" %>
+          <%= submit_tag "Search", class: "btn btn-primary" %>
+        <% end %>
       </div>
 
-      <!-- RIGHT CONTAINER -->
+      <%= render './pages/partials/equipments_list' %>
 
-      <div class="right-container">
-        <div id="map"
-            data-markers="<%= @markers.to_json %>"
-            data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-      </div>
     </div>
 
-    <!-- EQUIPMENT LIST -->
-
-    <%= render './pages/partials/home_equipments_slider' %>
   </div>
 
   <!-- MILEUP PRESENTATION -->

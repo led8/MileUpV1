@@ -1,0 +1,20 @@
+
+  <!-- EQUIPMENTS LIST -->
+
+  <div class="equipments-list">
+    <% if @equipments %>
+      <% @equipments.each do |equipment| %>
+        <div class="card"><%= equipment.name %></div>
+      <% end %>
+    <% end %>
+  </div>
+
+  <!-- MAP -->
+
+  <div class="map">
+    <div id="map"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+    </div>
+  </div>
+

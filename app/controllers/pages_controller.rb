@@ -5,6 +5,12 @@ class PagesController < ApplicationController
 
   def home
     @user = current_user
+     @equipments = InfoEquipment.where.not(lat: nil, lng: nil).first(10)
+     @markers = @equipments.map do |equipment|
+        { lat: equipment.lat, lng: equipment.lng,
+          popUp: render_to_string(partial: "./pages/partials/popup_equipment", locals: { equipment: equipment })
+        }
+    end
     render :home
   end
 
@@ -16,7 +22,7 @@ class PagesController < ApplicationController
           popUp: render_to_string(partial: "./pages/partials/popup_equipment", locals: { equipment: equipment })
         }
     end
-    render partial: "./pages/partials/home_equipments_slider"
+    render partial: "./pages/partials/equipments_list"
   end
 
   ## CSV METHOD TO GENERATE MODEL ##
