@@ -4,8 +4,8 @@
   <div class="equipments-list">
     <% if @equipments %>
       <% @equipments.each do |equipment| %>
-        <%= link_to info_equipment_path(equipment) do %>
-          <div class="card">
+
+          <div class="card" data-lat="<%= equipment.lat %>" data-lng="<%= equipment.lng %>">
             <div class="card-illustration"></div>
             <div class="card-content">
               <div class="activity"><%= equipment.activity %></div>
@@ -14,7 +14,7 @@
               <div class="environment"><%= equipment_environment(equipment.environment) %></div>
             </div>
           </div>
-        <% end %>
+
       <% end %>
     <% end %>
   </div>
