@@ -1,8 +1,8 @@
 const initUpdateNavbarOnScroll = () => {
-  const navbar = document.getElementById('navbar'),
+  const navbar = document.getElementById('navbar-transform'),
         partnerLink = document.getElementById('becoming-partner'),
         navbarItem = document.querySelector('.nav-item')
-        searchBar = document.querySelector('.filters-container');
+        searchBar = document.querySelector('.searchbar-transform');
 
   var navbarLoginButton = $('.navbar-login-button');
 
@@ -28,4 +28,4 @@ const initUpdateNavbarOnScroll = () => {
   }
 }
 
-initUpdateNavbarOnScroll();
+// initUpdateNavbarOnScroll();

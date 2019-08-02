@@ -13,12 +13,12 @@
         <% #end %>
       </div> -->
 
-      <div class="filters-container fixed">
-        <%= form_tag root_path, method: :get, class: "filters-form" do %>
-          <%= text_field_tag :query, params[:query], placeholder: "Trouver une activité", label: false, id: "find-activity", class: "form-control search-form-with-ajax" %>
-          <%= submit_tag "Rechercher", class: "btn btn-primary submit-with-ajax" %>
-        <% end %>
-      </div>
+        <div class="filters-container fixed">
+          <%= form_tag root_path, method: :get, class: "filters-form" do %>
+            <%= text_field_tag :query, params[:query], placeholder: "Trouver une activité", label: false, id: "find-activity", class: "form-control search-form-with-ajax" %>
+            <%= submit_tag "Rechercher", class: "btn btn-primary submit-search-bar" %>
+          <% end %>
+        </div>
 
       <%= render './pages/partials/equipments_list' %>
 

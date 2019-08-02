@@ -1,5 +1,5 @@
-/*$(document).ready(function() {
-  var scrollTop = $('.start-button');
+$(document).ready(function() {
+  var scrollTop = $('.scroll-top-event');
 
   $(scrollTop).click(function(event){
     event.preventDefault();
@@ -9,4 +9,4 @@
     return false
   })
 });
-*/
+
