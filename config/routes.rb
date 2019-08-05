@@ -21,10 +21,4 @@ Rails.application.routes.draw do
     root 'devise/sessions#new'
   end
   resources :authentications, only: [:destroy]
-
-
-  ## CSV ROUTES
-  get 'create_contact_models_from_csv', to: 'pages#create_contact_models_from_csv'
-  get 'create_city_equipments_models_from_csv', to: 'pages#create_city_equipments_models_from_csv'
-  get 'create_info_equipments_models_from_csv', to: 'pages#create_info_equipments_models_from_csv'
 end
