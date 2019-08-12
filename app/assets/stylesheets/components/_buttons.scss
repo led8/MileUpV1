@@ -109,3 +109,21 @@
     cursor: pointer;
   }
 }
+
+.transparent-green-button {
+  padding: 10px 20px;
+  color: $green;
+  border-radius: 50px;
+  border: 2px solid $green;
+  font-size: $button-font-size;
+  background: linear-gradient(to right, $green 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  &:hover {
+    transition: all .5s ease-out;
+    color: white;
+    text-decoration: none;
+    background-position: left bottom;
+    cursor: pointer;
+  }
+}
