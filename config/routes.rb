@@ -21,4 +21,9 @@ Rails.application.routes.draw do
     root 'devise/sessions#new'
   end
   resources :authentications, only: [:destroy]
+
+  ## PUBLIC ERRORS URL
+  match "/404", to: "errors#not_found", via: :all
+  match "/422", to: "errors#unacceptable", via: :all
+  match "/500", to: "errors#internal_server_error", via: :all
 end
