@@ -4,16 +4,16 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   post '/filter_with_ajax', to: 'pages#filter_with_ajax'
 
-  ## USERS ROUTES
+  # USERS ROUTES
   resources :users, only: [:index, :show] do
-    ## USER_PROFILS ROUTES WITH AJAX
+    # USER_PROFILS ROUTES WITH AJAX
     resources :user_profils, only: [:new, :create]
   end
 
-  ## EQUIPMENTS ROUTES
+  # EQUIPMENTS ROUTES
   resources :info_equipments, only: [:show]
 
-  ## FACEBOOK AUTHENTIFICATION
+  # FACEBOOK AUTHENTIFICATION
   authenticated :user do
     root 'pages#home', as: 'authenticated_root'
   end
@@ -22,8 +22,13 @@ Rails.application.routes.draw do
   end
   resources :authentications, only: [:destroy]
 
-  ## PUBLIC ERRORS URL
+  # PUBLIC ERRORS URL
   match "/404", to: "errors#not_found", via: :all
   match "/422", to: "errors#unacceptable", via: :all
   match "/500", to: "errors#internal_server_error", via: :all
+
+  # 301 REDIRECT FROM OLD URLs
+  match "/old_path_to_info_equipments/:id", to: redirect("/info_equipments/%{id}s"), via: :all
 end
+
+
