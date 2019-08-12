@@ -9,6 +9,9 @@ gem 'puma'
 gem 'rails', '5.2.3'
 gem 'redis'
 
+## SEO ##
+gem 'friendly_id', '~> 5.2.4'
+
 ## SEARCH ##
 gem 'pg_search'
 
