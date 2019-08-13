@@ -29,6 +29,9 @@ Rails.application.routes.draw do
 
   # 301 REDIRECT FROM OLD URLs
   match "/old_path_to_info_equipments/:id", to: redirect("/info_equipments/%{id}s"), via: :all
+
+  # Sitemap
+  get '/sitemap.xml' => 'sitemaps#index', defaults: { format: 'xml' }
 end
 
 
