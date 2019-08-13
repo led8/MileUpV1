@@ -1,3 +1,4 @@
+<!-- META TAGS -->
 <% content_for :meta_title, "#{@equipment.name} is on #{DEFAULT_META["meta_title"]}" %>
 <% content_for :meta_description, @equipment.activity %>
 <%# content_for :meta_image, cl_image_path(@equipment.photo.path) %>
@@ -54,7 +55,7 @@
             Les activités proposées
           </h3>
         </div>
-        <div class="bottom">
+        <div>
           <% sanitize_activity(@equipment.activity).each do |activity| %>
             <div class="content">
               <i class="fas fa-map-pin"></i>
@@ -69,4 +70,25 @@
   </div>
 
 </section>
+
+<!-- Structured Data -->
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Sport",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "<%= @equipment.address %>"
+    },
+    "name": "<%= @equipment.name %>",
+    "activity": [{
+      <% sanitize_activity(@equipment.activity).each do |activity| %>
+        "@type": "PhysicalActivity",
+        "name": "<%= activity %>"
+        },
+      <% end %>
+    ]
+  }
+</script>
 

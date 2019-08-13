@@ -29,6 +29,23 @@
     <%= stylesheet_pack_tag 'map' %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+
+    <!-- Structured Data -->
+   <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": "https://www.mileup.eu",
+      "logo": "",
+      "sameAs": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  </script>
+  <!-- End Structured Data -->
   </head>
   <body>
     <% unless params["controller"] == "errors" %>
