@@ -32,6 +32,9 @@ Rails.application.routes.draw do
 
   # Sitemap
   get '/sitemap.xml' => 'sitemaps#index', defaults: { format: 'xml' }
+
+  #robot.txt
+  get "/robots.:format", to: "pages#robots"
 end
 
 

@@ -36,4 +36,8 @@ class PagesController < ApplicationController
     # end
     render partial: "./pages/partials/equipments_list"
   end
+
+  def robots
+    respond_to :text
+  end
 end
