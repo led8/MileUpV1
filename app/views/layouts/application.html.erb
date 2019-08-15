@@ -48,7 +48,9 @@
   <!-- End Structured Data -->
   </head>
   <body>
-    <% unless params["controller"] == "errors" %>
+    <% unless params["controller"] == "errors" ||
+              params["controller"] == "registrations" ||
+              params["controller"] === "devise/sessions" %>
       <%= render 'shared/navbar' %>
     <% end %>
     <%= yield %>

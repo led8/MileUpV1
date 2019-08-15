@@ -1,4 +1,6 @@
 class UserProfilsController < ApplicationController
+
+
   def new
     @user = current_user
     @user_profil = UserProfil.new
