@@ -1,9 +1,13 @@
 class UsersController < ApplicationController
   def index
-    @user = current_user
-    @user_profil = UserProfil.new
+      @user = current_user
+      @user_profil = UserProfil.new
 
-    render layout: "session"
+    if @user.user_profil.nil?
+      render layout: "session"
+    else
+      render :show
+    end
   end
 
   def show
