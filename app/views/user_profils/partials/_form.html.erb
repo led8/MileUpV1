@@ -45,11 +45,11 @@
 
   <div class="form-about-age hidden">
     <h3 class="text-about-age white-text">
-      Vous êtes âgé de
+      Quel est votre age
     </h3>
 
     <div class="field">
-      <%= form.select :age, options_for_select(@age) %>
+      <%= form.text_field :age, id: "numeric-formating" %>
     </div>
 
     <div class="buttons-container">
@@ -66,7 +66,7 @@
     </h3>
 
     <div class="field">
-      <%= form.select :sport_frequencies, options_for_select(@sport_frequencies) %>
+      <%= form.select :sport_frequencies, options_for_select(@sport_frequencies, "...") %>
     </div>
 
     <div class="buttons-container">
@@ -83,7 +83,7 @@
     </h3>
 
     <div class="field">
-      <%= form.select :sport_interests, options_for_select(@sport_interests) %>
+      <%= form.select :sport_interests, options_for_select(@sport_interests, "...") %>
     </div>
 
     <div class="buttons-container">

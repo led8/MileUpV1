@@ -7,8 +7,16 @@ class UserProfil < ApplicationRecord
 
   def convert_to_integer
     puts "***** CONVERT AGE TO INTEGER METHOD *****"
-    if age
-      age.to_i
+    if self.age
+      self.age.to_i
+    end
+
+    if self.sport_frequencies === "..."
+      self.sport_frequencies = nil
+    end
+
+    if self.sport_interests === "..."
+      self.sport_interests = nil
     end
     puts "***** CONVERSION WITH SUCCESS *****"
   end

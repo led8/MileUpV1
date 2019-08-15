@@ -1,6 +1,17 @@
 // START AJAX FORM --> QUESTION 1 //
 $('#start-form a').parent().html("<%= j render './user_profils/partials/form', user: @user, user_profil: @user_profil %>")
 
+// Prevent enter key submit
+$('form').on('keypress', e => {
+    if (e.keyCode == 13) {
+        return false;
+    }
+  });
+
+// Handle numeric formating
+$('#numeric-formating').keyup(function(){
+  $(this).val($(this).val().replace(/[\D\s\._\-]+/g, ""));
+});
 
 // QUESTION ABOUT FIRST NAME //
 $('#user_profil_first_name').keyup(function(){

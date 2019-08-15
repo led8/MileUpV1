@@ -5,9 +5,8 @@ class UserProfilsController < ApplicationController
     @user = current_user
     @user_profil = UserProfil.new
 
-    @age = (15..70)
-    @sport_frequencies = ["1 à 2 fois par semaine", "3 à 4 fois par semaine", "5 fois par semaine ou plus", "Je ne sais pas", "Jamais"]
-    @sport_interests = ["Pour ma santé", "Pour la performance", "Pour le plaisir", "Pour me défouler", "Me retrouver entre amis", "Me retrouver en famille"]
+    @sport_frequencies = ["...", "1 à 2 fois par semaine", "3 à 4 fois par semaine", "5 fois par semaine ou plus", "Je ne sais pas", "Jamais"]
+    @sport_interests = ["...", "Pour ma santé", "Pour la performance", "Pour le plaisir", "Pour me défouler", "Me retrouver entre amis", "Me retrouver en famille"]
   end
 
   def create
