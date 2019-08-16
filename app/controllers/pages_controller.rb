@@ -3,6 +3,10 @@ require 'csv'
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: :home
 
+  def test
+    render layout: 'session'
+  end
+
   def home
     @user = current_user
     if params[:query].present?

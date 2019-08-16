@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   post '/filter_with_ajax', to: 'pages#filter_with_ajax'
 
+  get '/test', to: 'pages#test'
+
   # USERS ROUTES
   resources :users, only: [:index, :show] do
     # USER_PROFILS ROUTES WITH AJAX

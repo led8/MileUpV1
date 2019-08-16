@@ -1,7 +1,8 @@
 
-// DEPENDENCIES & FUNCTIONS IMPORT //
-
 import "bootstrap";
+
+import { fetchData } from '../plugins/unsplash';
+
 
 // import 'mapbox-gl/dist/mapbox-gl.css';
 
