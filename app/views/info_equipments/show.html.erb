@@ -7,7 +7,7 @@
 
   <!-- BANNER -->
 
-  <div class="banner">
+  <div class="banner" data-activity="<%= sanitize_activity(@equipment.activity).first %>">
 
     <div class="equipment-infos">
 
@@ -59,7 +59,7 @@
           <% sanitize_activity(@equipment.activity).each do |activity| %>
             <div class="content">
               <i class="fas fa-map-pin"></i>
-              <%= activity %>
+              <%= activity.strip %>
             </div>
           <% end %>
         </div>

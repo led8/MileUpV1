@@ -51,6 +51,7 @@
     <% unless params["controller"] == "errors" ||
               params["controller"] == "registrations" ||
               params["controller"] === "devise/sessions" %>
+      <%= render 'shared/search_bar' %>
       <%= render 'shared/navbar' %>
     <% end %>
     <%= yield %>

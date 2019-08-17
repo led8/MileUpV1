@@ -2,14 +2,12 @@
 // SOME USEFULL CLASSES //
 
     // FLEX BOX TRICKS //
-
 .flex-row-reverse {
   display: flex;
   flex-direction: row-reverse;
 }
 
     // DISPLAYING TRICKS //
-
 .visibility-hidden {
   visibility: hidden;
 }
@@ -19,7 +17,6 @@
 }
 
     // POSITION TRICKS //
-
 .relative {
   position: relative;
 }
@@ -30,8 +27,11 @@
   position: fixed;
 }
 
-    // TEXT COLOR //
-
+    // TEXT //
 .white-text {
   color: white;
+}
+
+.bolder {
+  font-weight: bolder;
 }

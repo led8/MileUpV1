@@ -1,0 +1,29 @@
+.search-bar {
+  width: 100%;
+  padding: 15px;
+  background-color: $dark-blue;
+  position: fixed;
+  z-index: 100;
+  transform: translateY(-100%);
+  transition: all .5s ease-out;
+  .filters-form {
+    display: flex;
+    margin: auto;
+    width: 50%;
+    .search-form-with-ajax {
+      height: 50px;
+      margin-right: 10px;
+      border-radius: 30px;
+    }
+    .submit-with-ajax, .submit-search-bar {
+      border-radius: 30px;
+      background-color: $purple;
+      border-color: $purple;
+      &:hover {
+        background-color: $purple;
+        transition: all .3s ease-out;
+        opacity: .9;
+      }
+    }
+  }
+}

@@ -76,6 +76,24 @@
   }
 }
 
+.dark-blue-button {
+  padding: 10px 40px;
+  background: #6847DA;
+  color: white;
+  border-radius: 50px;
+  transition: all .3s ease-out;
+  font-size: $button-font-size;
+  a {
+    text-decoration: none
+  }
+  &:hover {
+    text-decoration: none;
+    color: white;
+    box-shadow: 1px 1px 25px #6847DA;
+    cursor: pointer;
+  }
+}
+
 .facebook-button {
   padding: 10px 40px;
   transition: all .3s ease-out;

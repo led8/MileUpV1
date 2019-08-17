@@ -1,12 +1,14 @@
 .navbar-mileup {
   display: flex;
   justify-content: space-between;
-  background-color: $dark-blue;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 10;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  padding: 0 50px;
+  padding-top: 10px;
+  // background-color: $dark-blue;
+  // position: fixed;
+  // width: 100%;
+  // top: 0;
+  // z-index: 10;
+  // box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 .navbar-mileup .navbar-collapse {
   flex-grow: 0;
@@ -18,11 +20,11 @@
 .navbar-light {
   .navbar-nav {
     .nav-link {
-      color: white;
+      color: $dark-blue;
       margin-right: 15px;
       &:hover {
         text-decoration: underline;
-        color: white;
+        // color: white;
       }
     }
     .nav-item {

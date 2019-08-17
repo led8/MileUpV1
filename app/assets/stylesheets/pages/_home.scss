@@ -9,18 +9,18 @@ body {
 }
 section.home-container {
   .home-banner {
-    height: 100vh;
+    height: 90vh;
   }
 }
 
 // MAP CONTAINER //
 
 .map-container {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   display: flex;
-  padding: 10px;
-  padding-top: 86px;
+  padding: 10px 15px 0 15px;
+  // padding-top: 86px;
   .equipments-list {
     padding: 10px;
     padding-top: 100px;
@@ -42,10 +42,11 @@ section.home-container {
     width: 45%;
   }
   .filters-container {
-    top: 13%;
+    top: 1%;
     z-index: 10;
     display: flex;
     // width: 100%;
+    background-color: white;
     width: 54%;
     #filters-form, .filters-form {
       // width: 50%;
@@ -60,11 +61,12 @@ section.home-container {
       }
       .submit-with-ajax, .submit-search-bar {
         border-radius: 30px;
-        background-color: $purple;
-        border-color: $purple;
+        background-color: $dark-blue;
+        border-color: $dark-blue;
         &:hover {
           background-color: $dark-blue;
-          transition: all .5s ease-out;
+          transition: all .3s ease-out;
+          opacity: .9;
         }
       }
     }

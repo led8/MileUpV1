@@ -7,8 +7,11 @@ const unsplash = new Unsplash({
 });
 
 const fetchData = (unsplash) => {
-  unsplash.search.photos("karting", 1)
+  unsplash.search.photos("Kick", 1)
     .then(response => response.json())
     .then(data => console.log(data.results[0].urls.full))
 }
 fetchData(unsplash);
+
+var banner = document.querySelector('.equipment-container .banner');
+console.log(banner.dataset.activity)
