@@ -1,0 +1,51 @@
+.socials-banner {
+  width: 100%;
+  background-color: $purple;
+  opacity: .8;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  color: white;
+  .text {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  .links {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    i {
+      margin: 0 10px;
+    }
+  }
+}
+
+.footer-banner {
+  width: 100%;
+  background-color: $dark-blue;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  color: white;
+  .links {
+    display: flex;
+    flex-direction: column;
+    a {
+      text-decoration: none;
+      color: white;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .content {
+    display: flex;
+    align-items: baseline;
+  }
+  .separate-border {
+    border: 1px solid $purple;
+    width: 60px;
+    margin: 5px 0;
+  }
+}

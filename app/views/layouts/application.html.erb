@@ -55,6 +55,11 @@
       <%= render 'shared/navbar' %>
     <% end %>
     <%= yield %>
+    <% unless params["controller"] == "errors" ||
+              params["controller"] == "registrations" ||
+              params["controller"] === "devise/sessions" %>
+      <%= render 'shared/footer' %>
+    <% end %>
     <%= render 'shared/flashes' %>
     <%= javascript_pack_tag 'map' %>
     <%= javascript_include_tag 'application' %>
