@@ -1,11 +1,10 @@
 //= require jquery
-//= require search-bar
 //= require handle-equipment-filter
 //= require navbar
-//= require user-profil-onboarding
 //= require handle-paddles
 //= require slide-in-animation
 //= require scroll-top-animation
 //= require csv-loader
+//= require search-bar
 //= require rails-ujs
 //= require_tree .
