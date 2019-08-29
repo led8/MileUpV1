@@ -4,7 +4,6 @@
 //= require handle-paddles
 //= require slide-in-animation
 //= require scroll-top-animation
-//= require csv-loader
 //= require search-bar
 //= require rails-ujs
 //= require_tree .

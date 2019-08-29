@@ -7,14 +7,14 @@ class InfoEquipment < ApplicationRecord
   include PgSearch
   pg_search_scope :search_by_activity, against: [ :activity ], using: { tsearch: { prefix: true } }
 
-  before_save :anti_spam
+  # before_save :anti_spam
 
-  def anti_spam
-    doc = Nokogiri::HTML::DocumentFragment.parse(self.content)
-    doc.css('a').each do |a|
-      a[:rel] = 'nofollow'
-      a[:target] = '_blank'
-    end
-    self.content = doc.to_s
-  end
+  # def anti_spam
+  #   doc = Nokogiri::HTML::DocumentFragment.parse(self.content)
+  #   doc.css('a').each do |a|
+  #     a[:rel] = 'nofollow'
+  #     a[:target] = '_blank'
+  #   end
+  #   self.content = doc.to_s
+  # end
 end
