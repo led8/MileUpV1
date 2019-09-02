@@ -6,12 +6,23 @@ const unsplash = new Unsplash({
   secret: 'ea68b57f23fbe393bdd772a8dc072775e10fd45b4c878a338055d1fe0ab77c21'
 });
 
-const fetchData = (unsplash) => {
-  unsplash.search.photos("Kick", 1)
+const fetchDataBis = (unsplash) => {
+  var cards = document.querySelectorAll('.card-illustration');
+  console.log(cards[0].dataset.activity)
+
+  unsplash.search.photos(cards[0].dataset.activity, 1)
     .then(response => response.json())
-    .then(data => console.log(data.results[0].urls.full))
+    .then(data => cards.forEach(card => (card.style.backgroundImage = `url('${data.results[0].urls.small}')`)))
+}
+fetchDataBis(unsplash);
+
+const fetchData = (unsplash) => {
+  var banner = document.querySelector('.equipment-container .banner');
+  console.log(banner.dataset.activity)
+
+  unsplash.search.photos(banner.dataset.activity, 1)
+    .then(response => response.json())
+    .then(data => banner.style.backgroundImage = `url('${data.results[0].urls.full}')`)
 }
 fetchData(unsplash);
 
-var banner = document.querySelector('.equipment-container .banner');
-console.log(banner.dataset.activity)

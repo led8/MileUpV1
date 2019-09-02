@@ -6,7 +6,7 @@
       <% @equipments.each do |equipment| %>
 
           <div class="card" data-lat="<%= equipment.lat %>" data-lng="<%= equipment.lng %>">
-            <div class="card-illustration"></div>
+            <div class="card-illustration" data-activity="<%= sanitize_activity(equipment.activity).first %>"></div>
             <div class="card-content">
               <div class="activity"><%= equipment.activity %></div>
               <div class="name"><%= equipment.name %></div>
