@@ -6,7 +6,7 @@ class UsersController < ApplicationController
     if @user.user_profil.nil?
       render layout: "session"
     else
-      render :show
+      render "../views/pages/home"
     end
   end
 
