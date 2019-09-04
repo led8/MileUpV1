@@ -39,16 +39,6 @@
           </div>
         </li>
 
-      <% elsif city_signed_in? %>
-        <li class='nav-item dropdown'>
-          <div class="avatar dropdown-toggle", id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-            <%= svg('undraw_male_avatar_323b') %>
-          </div>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Se déconnecter", destroy_city_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
-        </li>
-
       <% else %>
         <li class="nav-item">
           <%= link_to "Devenir une ville partenaire", new_city_registration_path, class: "nav-link" %>

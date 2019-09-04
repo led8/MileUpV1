@@ -1,17 +1,17 @@
 Rails.application.routes.draw do
-  devise_for :cities
-  devise_for :users, controllers: { omniauth_callbacks: 'omniauth_callbacks',
-                                    registrations: 'registrations' }
+  devise_for :users, controllers: { omniauth_callbacks: 'omniauth_callbacks', registrations: 'registrations',
+                                    sessions: 'sessions' }
   root to: 'pages#home'
   post '/filter_with_ajax', to: 'pages#filter_with_ajax'
-
-  get '/test', to: 'pages#test'
 
   # USERS ROUTES
   resources :users, only: [:index, :show] do
     # USER_PROFILS ROUTES WITH AJAX
     resources :user_profils, only: [:new, :create]
   end
+
+  # CITIES ROUTES
+  resources :cities, only: [:show]
 
   # EQUIPMENTS ROUTES
   resources :info_equipments, only: [:show]
