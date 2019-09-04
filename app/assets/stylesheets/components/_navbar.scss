@@ -34,6 +34,10 @@
   }
 }
 
+.dropdown-toggle::after {
+  display: none;
+}
+
 // CLASSES ABOUT JS ANIMATION //
 
 .navbar-transform {

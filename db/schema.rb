@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_12_142245) do
+ActiveRecord::Schema.define(version: 2019_09_04_085838) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(version: 2019_08_12_142245) do
     t.string "environment"
     t.string "name"
     t.string "slug"
+    t.string "city"
     t.index ["activity"], name: "index_info_equipments_on_activity"
     t.index ["slug"], name: "index_info_equipments_on_slug", unique: true
   end

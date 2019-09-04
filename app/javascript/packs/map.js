@@ -78,7 +78,7 @@ const initMapboxEquipment = () => {
     const marker = JSON.parse(mapElement.dataset.marker);
     const map = new mapboxgl.Map({
       container: 'equipment-map',
-      style: "mapbox://styles/ledhuy/cjygzo2kc008n1cl539vyk7lg"
+      style: 'mapbox://styles/mapbox/streets-v10',
     });
     addMarkerOnEquipment(map, marker);
     fitMapToMarkerOnEquipment(map, marker);

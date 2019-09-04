@@ -7,6 +7,9 @@ class User < ApplicationRecord
 
   has_one :user_profil, dependent: :destroy
 
+  delegate :gender, :age, :size, :weight, :sport_frequencies, :sport_interests, :home_address, :work_address,
+           :avatar, :first_name, :last_name, to: :user_profile
+
   validates :email, presence: true, uniqueness: true
 
   ## FACEBOOK AUTHENTIFICATION ##
