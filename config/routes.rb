@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :cities, path: 'cities', controllers: { sessions: "cities/sessions", registrations: "cities/registrations" }
   devise_for :users, controllers: { omniauth_callbacks: 'omniauth_callbacks', registrations: 'registrations',
                                     sessions: 'sessions' }
   root to: 'pages#home'

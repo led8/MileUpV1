@@ -50,14 +50,18 @@
   <body>
     <% unless params["controller"] == "errors" ||
               params["controller"] == "registrations" ||
-              params["controller"] === "devise/sessions" %>
+              params["controller"] == "sessions" ||
+              params["controller"] == "cities/sessions" ||
+              params["controller"] == "cities/registrations" %>
       <%= render 'shared/search_bar' %>
       <%= render 'shared/navbar' %>
     <% end %>
     <%= yield %>
     <% unless params["controller"] == "errors" ||
               params["controller"] == "registrations" ||
-              params["controller"] === "devise/sessions" %>
+              params["controller"] == "sessions" ||
+              params["controller"] == "cities/sessions" ||
+              params["controller"] == "cities/registrations" %>
       <%= render 'shared/footer' %>
     <% end %>
     <%= render 'shared/flashes' %>

@@ -1,0 +1,30 @@
+<section class="signin-container">
+  <div class="mileup-logo"><%= svg('logo') %></div>
+  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="form-inputs login-form">
+      <%= f.input :email,
+                  label: "Addresse e-mail",
+                  required: false,
+                  autofocus: true,
+                  input_html: { autocomplete: "email" } %>
+      <%= f.input :password,
+                  label: "Mot de passe",
+                  required: false,
+                  input_html: { autocomplete: "current-password" } %>
+
+      <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+        <%= link_to "Mot de passe oublié ?", new_password_path(resource_name), class: "forgot-password" %>
+      <% end %>
+
+      <%= f.input :remember_me, label: "Se souvenir de moi", as: :boolean if devise_mapping.rememberable? %>
+    </div>
+    <div class="buttons-container">
+      <div class="form-actions">
+        <%= f.button :submit, "Se connecter", class: "login-button-large" %>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="do-not-member white-text">Vous n'êtes pas encore une ville partenaire ?</div>
+  <%= render "cities/shared/links" %>
+</section>

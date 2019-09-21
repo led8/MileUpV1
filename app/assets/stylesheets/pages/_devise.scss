@@ -33,7 +33,7 @@ section.signin-container {
     font-weight: lighter;
     margin-top: 2rem;
   }
-  .simple_form.new_user {
+  .simple_form.new_user, .simple_form.new_city {
     width: 100%;
     label {
       color: white;
@@ -100,7 +100,7 @@ section.signin-container {
   }
 }
 section.signup-container {
-  height: 100%;
+  height: 100vh;
   background-color: $dark-blue;
   padding-left: 50px;
   padding-right: 50px;
@@ -116,7 +116,7 @@ section.signup-container {
     justify-content: center;
     margin-bottom: 10px;
   }
-  .simple_form.new_user {
+  .simple_form.new_user, .simple_form.new_city {
     width: 100%;
     label {
       color: white;
@@ -183,7 +183,7 @@ section.signup-container {
       justify-content: center;
       display: flex;
       align-items: baseline;
-     }
+    }
     .text-muted {
       font-size: .8rem;
       color: $light-blue-2 !important;

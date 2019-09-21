@@ -1,4 +1,6 @@
 class UserProfilsController < ApplicationController
+  before_action :authenticate_user!
+
   def new
     @user = current_user
     @user_profil = UserProfil.new
