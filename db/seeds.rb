@@ -46,7 +46,7 @@ CSV.foreach(filepath) do |row|
   info_equipment = InfoEquipment.new(lat: "#{row[0]}", lng: "#{row[1]}", address: "#{row[4]} #{row[3]}, #{row[24].to_i} #{row[17]}",
                                       creation_date: "#{row[6]}", equipment_type: "#{row[12]}", activity: "#{row[13]}",
                                       nb_equipments: "#{row[16].to_i}", level: "#{row[18]}", environment: "#{row[22]}",
-                                      name: "#{row[23]}", city: "#{row[17]}")
+                                      name: "#{row[23]}", city: "#{row[17]}", rating: (1..5).to_a.sample)
   info_equipment.save
   count += 1
   puts "#{count} equipments created !"
