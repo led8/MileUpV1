@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   def home
     @user = current_user
     if params[:query].present?
-       @equipments = InfoEquipment.where.not(lat: nil, lng: nil).search_by_activity("#{params[:query]}")
+       @equipments = InfoEquipment.where.not(lat: nil, lng: nil).search_by_activity_and_city("#{params[:query]}")
        @markers = @equipments.map do |equipment|
           { lat: equipment.lat, lng: equipment.lng,
             popUp: render_to_string(partial: "./pages/partials/popup_equipment", locals: { equipment: equipment })

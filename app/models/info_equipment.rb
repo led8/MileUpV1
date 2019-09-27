@@ -8,7 +8,7 @@ class InfoEquipment < ApplicationRecord
 
   # PgSearch
   include PgSearch
-  pg_search_scope :search_by_activity, against: [ :activity ], using: { tsearch: { prefix: true } }
+  pg_search_scope :search_by_activity_and_city, against: [ :activity, :city ], using: { tsearch: { prefix: true } }
 
   # before_save :anti_spam
 
