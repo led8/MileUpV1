@@ -4,7 +4,7 @@
 
 ⚠️Be careful, use SSH url⚠️ To clone the project run these commands :
 
-```
+```git
 git clone git@github.com:led8/MileUpV1.git
 cd MileUpV1
 
