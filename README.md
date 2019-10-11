@@ -4,7 +4,7 @@
 
 ⚠️Be careful, use SSH url⚠️ To clone the project run these commands :
 
-```git
+```
 git clone git@github.com:led8/MileUpV1.git
 cd MileUpV1
 
@@ -68,7 +68,7 @@ Then add this key to your `.env`.
 MAPBOX_API_KEY=pk.eyJ1Ijoib*******************yZEaZzNaJGKAmo7YmIc73A
 ```
 
-Make sure to push your MAPBOX_API_KEY env variable to Heroku :
+Make sure to push your `MAPBOX_API_KEY` env variable to Heroku :
 
 ```
 heroku config:set MAPBOX_API_KEY=pk.eyJ1Ijoib....
@@ -90,7 +90,7 @@ FACEBOOK_APP_ID=*******************
 FACEBOOK_APP_SECRET=*******************
 ```
 
-Make sure to push your FACEBOOK_APP_ID and FACEBOOK_APP_SECRET env variables to Heroku :
+Make sure to push your `FACEBOOK_APP_ID` and `FACEBOOK_APP_SECRET` env variables to Heroku :
 
 ```
 heroku config:set FACEBOOK_APP_ID=***....
@@ -112,7 +112,7 @@ Then add this key to your `.env`.
 CLOUDINARY_URL=cloudinary://216966356367945:Ir45vlbSJ*******************
 ```
 
-Make sure to push your CLOUDINARY_URL env variable to Heroku :
+Make sure to push your `CLOUDINARY_URL` env variable to Heroku :
 
 ```
 heroku config:set CLOUDINARY_URL=cloudinary://216....
@@ -134,7 +134,7 @@ UNSPLASH_ACCESS_KEY=*******************
 UNSPLASH_SECRET_KEY=*******************
 ```
 
-Make sure to push your UNSPLASH_ACCESS_KEY and UNSPLASH_SECRET_KEY env variables to Heroku :
+Make sure to push your `UNSPLASH_ACCESS_KEY` and `UNSPLASH_SECRET_KEY` env variables to Heroku :
 
 ```
 heroku config:set UNSPLASH_ACCESS_KEY=***....
